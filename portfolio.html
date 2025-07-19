@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Suriya - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* --- CSS Styling for Aesthetic Theme --- */
+
+        :root {
+            --primary-color: #2c3e50; /* Dark Blue/Charcoal - for header, strong text */
+            --accent-color-1: #3498db; /* Vibrant Blue - for buttons, highlights, borders */
+            --accent-color-2: #ecf0f1; /* Light Gray/Off-white - for secondary backgrounds */
+            --text-color: #333333; /* Darker gray for main text */
+            --background-color: #f8f9fa; /* Very Light Gray - for main page background */
+            --card-background: #ffffff; /* White - for content cards */
+            --border-color: #ddd; /* Light gray for input borders */
+        }
+
+        /* Basic Reset & Body Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7; /* Improved readability */
+            color: var(--text-color);
+            background-color: var(--background-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end; /* Align hamburger/nav to the right */
+            align-items: center;
+        }
+
+        .hamburger-menu {
+            display: none; /* Hidden by default on larger screens */
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin-left: auto; /* Push links to the right */
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: var(--accent-color-1);
+        }
+
+        /* Main Content Area */
+        main {
+            flex: 1; /* Allows main content to grow and push footer down */
+            padding: 2rem;
+            padding-top: 80px; /* Space for fixed header */
+            max-width: 1200px; /* Max width for content for better readability */
+            margin: 0 auto; /* Center the content */
+            width: 100%;
+        }
+
+        /* Generic Section Styling */
+        section {
+            margin-bottom: 3rem;
+            padding: 2.5rem; /* Increased padding */
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Softer, deeper shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced hover effect */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Intro Section */
+        #intro-section {
+            text-align: center;
+            padding: 6rem 2rem; /* More vertical space */
+            background-color: transparent; /* No card background for intro */
+            box-shadow: none;
+        }
+
+        #intro-section h1 {
+            font-size: 4rem; /* Larger font size */
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .intro-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem; /* Space between buttons */
+        }
+
+        .intro-buttons button {
+            background-color: var(--accent-color-1);
+            color: white;
+            border: none;
+            padding: 1.2rem 3rem; /* Larger buttons */
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-buttons button:hover {
+            background-color: #2980b9; /* Slightly darker blue */
+            transform: translateY(-3px); /* More pronounced lift */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Portfolio Content Sections */
+        .portfolio-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .portfolio-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem; /* Larger heading for sections */
+            border-bottom: 3px solid var(--accent-color-1); /* Thicker border */
+            padding-bottom: 0.8rem;
+            display: inline-block; /* Make border-bottom only as wide as text */
+            font-weight: 600;
+        }
+
+        .portfolio-card h3 {
+            color: var(--accent-color-1);
+            margin-top: 2rem; /* More space above subheadings */
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .portfolio-card p {
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1.5rem;
+        }
+
+        .portfolio-card ul li {
+            margin-bottom: 1rem;
+            padding-left: 1.8rem; /* More space for custom bullet */
+            position: relative;
+        }
+
+        .portfolio-card ul li::before {
+            content: "\2022"; /* Unicode for bullet point */
+            color: var(--accent-color-1);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.8em;
+            position: absolute;
+            font-size: 1.2em; /* Larger bullet */
+        }
+
+        /* Contact Form Styling */
+        .contact-form-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+        }
+
+        .contact-form-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem; /* More space between form elements */
+            max-width: 650px; /* Slightly wider form */
+            margin: 0 auto;
+            padding: 2.5rem;
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form-section label {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.4rem;
+            display: block; /* Ensures label takes its own line */
+        }
+
+        .contact-form-section input[type="text"],
+        .contact-form-section input[type="email"],
+        .contact-form-section select,
+        .contact-form-section textarea {
+            padding: 1rem; /* Larger input fields */
+            border: 1px solid var(--border-color);
+            border-radius: 6px; /* Slightly more rounded corners */
+            font-size: 1.05rem;
+            width: 100%;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form-section input:focus,
+        .contact-form-section select:focus,
+        .contact-form-section textarea:focus {
+            border-color: var(--accent-color-1);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.25); /* More prominent focus ring */
+        }
+
+        .contact-form-section textarea {
+            resize: vertical;
+            min-height: 150px; /* Taller textarea */
+        }
+
+        .contact-form-section button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1.2rem 2.8rem;
+            border-radius: 50px;
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            align-self: flex-end; /* Align button to the right */
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-section button:hover {
+            background-color: #1a242f; /* Darker primary on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-note {
+            font-size: 0.95rem;
+            color: #666;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Social Media Icons */
+        .social-links {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 0 0.8rem;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color-1);
+            transform: scale(1.1);
+        }
+
+        /* Proverb Styling */
+        .proverb {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Resume Section Styling */
+        #resume-section {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+            padding: 2.5rem;
+            max-width: 800px; /* A bit narrower for resume readability */
+            margin: 0 auto 3rem auto; /* Center it */
+        }
+
+        #resume-section h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        #resume-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color-1);
+            padding-bottom: 0.5rem;
+        }
+
+        #resume-section .resume-header-info {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        #resume-section .resume-header-info span {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        #resume-section .resume-header-info a {
+            color: var(--accent-color-1);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        #resume-section .resume-header-info a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        #resume-section strong {
+            color: var(--primary-color);
+        }
+
+        #resume-section ul {
+            list-style: none;
+            padding-left: 1.5rem; /* Indent lists slightly */
+            margin-bottom: 1rem;
+        }
+        #resume-section ul li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        #resume-section ul li::before {
+            content: "\2022"; /* Bullet point */
+            color: var(--accent-color-1);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.5em;
+            position: absolute;
+        }
+        
+        #resume-section p {
+            margin-bottom: 1rem;
+        }
+
+        .resume-buttons {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .resume-buttons button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            margin: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .resume-buttons button:hover {
+            background-color: #1a242f; /* Darker primary */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Global Proverb (at the bottom of main) */
+        #global-proverb {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-top: 5rem; /* More space above footer */
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 1.5rem;
+                justify-content: space-between; /* Hamburger to right, no explicit space-around for nav links as they stack */
+            }
+
+            .nav-links {
+                display: none; /* Hide by default on mobile */
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 70px; /* Below header */
+                left: 0;
+                padding: 1rem 0;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex; /* Show when active */
+            }
+
+            .nav-links li {
+                margin: 0.8rem 0;
+            }
+
+            .hamburger-menu {
+                display: block; /* Show hamburger on smaller screens */
+            }
+
+            #intro-section {
+                padding: 4rem 1rem;
+            }
+
+            #intro-section h1 {
+                font-size: 3rem;
+            }
+
+            .intro-buttons {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+
+            .intro-buttons button {
+                width: 90%;
+                max-width: 300px;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            main {
+                padding: 1rem;
+                padding-top: 70px; /* Adjust for smaller header on mobile */
+            }
+
+            section {
+                padding: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .portfolio-card h2 {
+                font-size: 1.9rem;
+            }
+
+            .portfolio-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .contact-form-section form {
+                padding: 1.5rem;
+                gap: 1.2rem;
+            }
+
+            .contact-form-section button {
+                padding: 1rem 2rem;
+                font-size: 1.05rem;
+            }
+
+            .social-links a {
+                font-size: 1.8rem;
+                margin: 0 0.6rem;
+            }
+
+            .proverb {
+                font-size: 1rem;
+            }
+
+            #resume-section {
+                padding: 1.5rem;
+            }
+            #resume-section h1 {
+                font-size: 2rem;
+            }
+            #resume-section h2 {
+                font-size: 1.5rem;
+            }
+            #resume-section .resume-header-info {
+                font-size: 0.95rem;
+            }
+            .resume-buttons button {
+                width: 80%;
+                margin: 0.5rem auto;
+            }
+            #global-proverb {
+                font-size: 1rem;
+                margin-top: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #intro-section h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 1.2rem;
+            }
+
+            .portfolio-card h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about-me-section">About Me</a></li>
+                <li><a href="#education-section">Education</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#achievements-section">Achievements</a></li>
+                <li><a href="#" id="contact-nav-link">Contact</a></li>
+                <li><a href="#" id="resume-link">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro-section" class="active">
+            <h1>Hi, I'm S. Suriya</h1>
+            <div class="intro-buttons">
+                <button id="learn-more-btn">Learn More</button>
+                <button id="get-in-touch-btn">Get In Touch</button>
+            </div>
+        </section>
+
+        <section id="portfolio-section" class="hidden">
+            <div class="portfolio-content">
+                <section id="about-me-section" class="portfolio-card">
+                    <h2>About Me</h2>
+                    <p>I am S. Suriya, a second-year undergraduate student pursuing B.Tech in Computer Science and Business Systems (CSBS) at Rajalakshmi Engineering College, Chennai. I am passionate about using technology to solve real-world problems and have a particular interest in the field of Artificial Intelligence. I enjoy exploring AI-based tools and platforms such as ChatGPT, DeepSeek, and Gemini, which I often utilize to enhance both my academic understanding and problem-solving abilities. As a learner committed to growth, I continuously seek opportunities to upskill, explore new technologies, and apply my knowledge practically.</p>
+                </section>
+
+                <section id="education-section" class="portfolio-card">
+                    <h2>Education</h2>
+                    <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
+                    <p>Rajalakshmi Engineering College, Chennai</p>
+                    <p>2023 – Present</p>
+                    <p>Current CGPA: 8.14</p>
+                    <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
+                    <p>Completed full schooling up to Class 12 at the same institution</p>
+                    <p>Year of Completion: 2024</p>
+                </section>
+
+                <section id="skills-section" class="portfolio-card">
+                    <h2>Technical Skills</h2>
+                    <ul>
+                        <li><strong>Programming Languages:</strong> C, Python, Java (currently learning)</li>
+                        <li><strong>Data Structures and Algorithms (DSA):</strong> Core concepts and applications</li>
+                        <li><strong>Artificial Intelligence Tools:</strong> Proficient in applying AI tools like ChatGPT, DeepSeek, and Gemini for academic support and creative problem-solving</li>
+                        <li><strong>Problem Solving:</strong> Strong inclination toward logic-building and using code for efficient solutions</li>
+                    </ul>
+                    <h3>Tools and Platforms</h3>
+                    <ul>
+                        <li><strong>TryHackMe:</strong> Engaging in cybersecurity basics and simulations to strengthen awareness and skills</li>
+                        <li><strong>Git & GitHub:</strong> Version control and collaborative coding using repositories</li>
+                        <li><strong>GeeksforGeeks:</strong> Regularly used for understanding computer science concepts and practicing coding problems</li>
+                    </ul>
+                    <p>These platforms support my academic learning and help me build practical knowledge and skills efficiently.</p>
+                </section>
+
+                <section id="current-focus-section" class="portfolio-card">
+                    <h2>My Current Focus</h2>
+                    <p>At present, I am deeply focused on enhancing my coding abilities, completing certification courses, and building simple but effective projects. I am actively learning Java and Database Management Systems to expand my technical foundation. Additionally, I am exploring multiple AI platforms to understand their real-world applications and integrate them into my problem-solving approach.</p>
+                </section>
+
+                <section id="achievements-section" class="portfolio-card">
+                    <h2>Achievements</h2>
+                    <ul>
+                        <li><strong>Python Foundation Certificate:</strong> Completed through Infosys Springboard, recognizing my foundational skills in Python programming</li>
+                        <li><strong>Cybersecurity Virtual Job Simulation:</strong> Successfully completed a Cyber Job Simulation with Deloitte, gaining insights into real-world cybersecurity tasks and workplace scenarios</li>
+                    </ul>
+                </section>
+
+                <section id="contact-section-inside" class="portfolio-card contact-form-section">
+                    <h2>Get In Touch</h2>
+                    <form class="contact-form-section-form" action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="YOUR_PORTFOLIO_URL#intro-section">
+
+                        <label for="name-inside">Name:</label>
+                        <input type="text" id="name-inside" name="Name" required placeholder="Your name">
+
+                        <label for="email-inside">Email:</label>
+                        <input type="email" id="email-inside" name="Email" required placeholder="yourname@xyz.com">
+
+                        <label for="reason-inside">Reason for reaching out:</label>
+                        <select id="reason-inside" name="Reason for reaching out" required>
+                            <option value="" disabled selected>Select a reason</option>
+                            <option value="Internship opportunity">Internship opportunity</option>
+                            <option value="Project collaboration">Project collaboration</option>
+                            <option value="Portfolio feedback">Portfolio feedback</option>
+                            <option value="Offering mentorship or career advice">Offering mentorship or career advice</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <label for="message-inside">Your Message:</label>
+                        <textarea id="message-inside" name="Message" rows="7" required placeholder="Your message"></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="https://github.com/suriyadns" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/suriya-s-bababa340" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/suriya.__777/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="proverb">"The future belongs to those who learn more skills and combine them in creative ways."</p>
+                </section>
+            </div>
+        </section>
+
+        <section id="contact-section-outside" class="hidden contact-form-section">
+            <h2>Get In Touch</h2>
+            <form class="contact-form-section-form" action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="YOUR_PORTFOLIO_URL#intro-section">
+
+                <label for="name-outside">Name:</label>
+                <input type="text" id="name-outside" name="Name" required placeholder="Your name">
+
+                <label for="email-outside">Email:</label>
+                <input type="email" id="email-outside" name="Email" required placeholder="yourname@xyz.com">
+
+                <label for="reason-outside">Reason for reaching out:</label>
+                <select id="reason-outside" name="Reason for reaching out" required>
+                    <option value="" disabled selected>Select a reason</option>
+                    <option value="Internship opportunity">Internship opportunity</option>
+                    <option value="Project collaboration">Project collaboration</option>
+                    <option value="Portfolio feedback">Portfolio feedback</option>
+                    <option value="Offering mentorship or career advice">Offering mentorship or career advice</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="message-outside">Your Message:</label>
+                <textarea id="message-outside" name="Message" rows="7" required placeholder="Your message"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://github.com/suriyadns" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/suriya-s-bababa340" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/suriya.__777/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="proverb">"The best way to predict the future is to create it."</p>
+        </section>
+
+        <section id="resume-section" class="hidden">
+            <h1>S. SURIYA</h1>
+            <div class="resume-header-info">
+                <span>2nd Year B.Tech Student – Computer Science and Business Systems</span>
+                <span>Rajalakshmi Engineering College, Chennai</span>
+                <span>📧 <a href="mailto:dnssuriya@gmail.com">dnssuriya@gmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/suriya-s-bababa340" target="_blank">LinkedIn</a> | 🐙 <a href="https://github.com/suriyadns" target="_blank">GitHub</a> | 🌐 <a href="Link to your website once deployed" target="_blank">Portfolio</a></span>
+            </div>
+
+            <hr>
+
+            <h2>SUMMARY</h2>
+            <p>Highly motivated second-year Computer Science and Business Systems student with a keen interest in <strong>Artificial Intelligence</strong> and its applications. Proven foundational skills in <strong>Python, C, and Data Structures & Algorithms</strong>, complemented by practical experience with <strong>AI tools (ChatGPT, DeepSeek, Gemini)</strong>. Eager to leverage problem-solving abilities and a commitment to continuous learning to contribute to innovative projects and gain valuable industry experience.</p>
+
+            <hr>
+
+            <h2>EDUCATION</h2>
+            <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
+            <p>Rajalakshmi Engineering College, Chennai</p>
+            <p>2023 – Present</p>
+            <p>Current CGPA: 8.14</p>
+
+            <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
+            <p>Completed full schooling up to Class 12 at the same institution</p>
+            <p>Year of Completion: 2024</p>
+
+            <hr>
+
+            <h2>TECHNICAL SKILLS</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, C (currently learning Java with a focus on OOPs)</li>
+                <li><strong>Core Concepts:</strong> Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP)</li>
+                <li><strong>AI Tools:</strong> ChatGPT, DeepSeek, Gemini (for problem-solving & academic support)</li>
+                <li><strong>Version Control:</strong> Git, GitHub</li>
+                <li><strong>Databases:</strong> Currently learning Database Management Systems (DBMS)</li>
+                <li><strong>Platforms & Tools:</strong> TryHackMe (Cybersecurity basics), GeeksforGeeks (Coding practice)</li>
+            </ul>
+
+            <hr>
+
+            <h2>ACHIEVEMENTS & CERTIFICATIONS</h2>
+            <ul>
+                <li><strong>Python Foundation Certificate</strong> – Infosys Springboard</li>
+                <li><strong>Cybersecurity Virtual Job Simulation</strong> – Deloitte (Gained insights into real-world cybersecurity tasks)</li>
+            </ul>
+
+            <hr>
+
+            <h2>PROJECTS</h2>
+            <p>(Actively building a personal portfolio and practical coding models. Currently exploring potential AI-driven projects for development and presentation.)</p>
+
+            <div class="resume-buttons">
+                <a href="path/to/your/s_suriya_resume.pdf" download="S.Suriya_Resume.pdf">
+                    <button>Download Resume</button>
+                </a>
+                <button id="back-to-home-btn">Back to Home</button>
+            </div>
+        </section>
+
+        <p id="global-proverb">"Success is not final, failure is not fatal: it is the courage to continue that counts."</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 S. Suriya. All rights reserved.</p>
+    </footer>
+
+    <script>
+        /* --- JavaScript for Interactivity --- */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const introSection = document.getElementById('intro-section');
+            const portfolioSection = document.getElementById('portfolio-section');
+            const contactSectionOutside = document.getElementById('contact-section-outside'); // The separate contact section
+            const resumeSection = document.getElementById('resume-section'); // The new resume section
+
+            const learnMoreBtn = document.getElementById('learn-more-btn');
+            const getInTouchBtn = document.getElementById('get-in-touch-btn'); // The main "Get In Touch" button
+            const backToHomeBtn = document.getElementById('back-to-home-btn'); // New button
+
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navLinks = document.getElementById('nav-links');
+            const navLinksList = navLinks.querySelectorAll('a');
+
+            // Function to show a specific section and hide others
+            function showSection(sectionToShow) {
+                introSection.classList.add('hidden');
+                portfolioSection.classList.add('hidden');
+                contactSectionOutside.classList.add('hidden');
+                resumeSection.classList.add('hidden'); 
+                
+                sectionToShow.classList.remove('hidden');
+                navLinks.classList.remove('active'); // Close mobile menu if open
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top of the shown section
+            }
+
+            // Event Listeners for Intro Buttons
+            learnMoreBtn.addEventListener('click', () => {
+                showSection(portfolioSection);
+            });
+
+            getInTouchBtn.addEventListener('click', () => {
+                showSection(contactSectionOutside); // Show the separate contact form
+            });
+
+            // Back to Home button functionality (for resume section)
+            backToHomeBtn.addEventListener('click', () => {
+                showSection(introSection); // Show the initial home screen
+            });
+
+
+            // Hamburger Menu Toggle for Mobile
+            hamburgerMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Navigation Links Functionality
+            navLinksList.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default anchor jump
+
+                    const targetHref = link.getAttribute('href');
+
+                    if (link.id === 'contact-nav-link') {
+                        // Special handling for "Contact" in the navigation, always shows the outside contact form
+                        showSection(contactSectionOutside);
+                    } else if (link.id === 'resume-link') {
+                        // Handling for "Resume" - show the new resume section
+                        showSection(resumeSection);
+                    } else if (targetHref.startsWith('#')) {
+                        // For other internal portfolio sections (About Me, Education, Skills, Achievements, and inside-contact)
+                        showSection(portfolioSection); // Ensure portfolio is visible
+                        setTimeout(() => {
+                            const targetElement = document.querySelector(targetHref);
+                            if (targetElement) {
+                                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }, 100); // Small delay to allow section to render before scrolling
+                    }
+                    navLinks.classList.remove('active'); // Close mobile menu after click
+                });
+            });
+            
+            // No custom JavaScript for form submission as FormSubmit.co handles it directly via the 'action' attribute
+            // We removed the handleMailtoSubmission function.
+        });
+    </script>
+</body>
+</html>
