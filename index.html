@@ -1,3 +1,21 @@
+I have combined your portfolio into a single-page layout. Now, all sections, including the "Hi, I'm S. Suriya" introduction and all your portfolio content, are on one continuous page.
+
+-----
+
+### **Key Changes**
+
+  * **Single-Page Structure**: I've removed the separate hidden sections. The "Hi, I'm S. Suriya" greeting is now the first section on the page. All other sections—About Me, Education, Skills, and Contact—follow immediately after it.
+  * **Smooth Scrolling**: The "Learn More" and "Get In Touch" buttons on the intro screen now smoothly scroll the user down to the relevant content on the same page. Similarly, the navigation links in the header will smoothly scroll to their respective sections.
+  * **Simplified Navigation**: The JavaScript has been updated to reflect this new structure. Instead of toggling between pages, it simply scrolls the user to the correct location. This makes the code cleaner and the user experience much more intuitive.
+  * **Unified Design**: The professional, high-class dark theme remains consistent across the entire page, ensuring a cohesive and polished look from top to bottom.
+
+-----
+
+### **Complete Portfolio Code**
+
+You can now copy and paste the entire code block below into a single `index.html` file. This new version combines everything into a fluid, one-page experience.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,7 +160,7 @@
             gap: 2.5rem;
         }
 
-        .intro-buttons button {
+        .intro-buttons a button {
             background: rgba(0, 0, 0, 0.2);
             color: var(--button-text);
             border: 2px solid var(--accent-blue);
@@ -155,7 +173,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .intro-buttons button:hover {
+        .intro-buttons a button:hover {
             background-color: var(--accent-blue);
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 162, 255, 0.4);
@@ -411,7 +429,7 @@
             box-shadow: 0 6px 20px rgba(0, 162, 255, 0.3);
         }
 
-        .resume-buttons button:hover {
+        .resume-buttons a button:hover {
             background-color: #0087d1;
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 162, 255, 0.5);
@@ -481,7 +499,7 @@
                 gap: 1.5rem;
             }
 
-            .intro-buttons button {
+            .intro-buttons a button {
                 width: 90%;
                 max-width: 350px;
                 padding: 1.2rem 2.5rem;
@@ -525,22 +543,6 @@
                 font-size: 1rem;
             }
 
-            #resume-section {
-                padding: 2rem;
-            }
-
-            #resume-section h1 {
-                font-size: 2.5rem;
-            }
-
-            #resume-section h2 {
-                font-size: 1.8rem;
-            }
-
-            #resume-section .resume-header-info {
-                font-size: 1rem;
-            }
-
             .resume-buttons a button {
                 width: 80%;
                 margin: 0.6rem auto;
@@ -562,7 +564,6 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <nav>
@@ -575,7 +576,6 @@
                 <li><a href="#skills-section">Skills</a></li>
                 <li><a href="#certifications-section">Certifications</a></li>
                 <li><a href="#contact-section">Contact</a></li>
-                <li><a href="#" id="resume-link">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -584,96 +584,92 @@
         <section id="intro-section">
             <h1>Hi, I'm S. Suriya</h1>
             <div class="intro-buttons">
-                <button id="learn-more-btn">Learn More</button>
-                <button id="get-in-touch-btn">Get In Touch</button>
+                <a href="#about-me-section"><button>Learn More</button></a>
+                <a href="#contact-section"><button>Get In Touch</button></a>
             </div>
         </section>
 
-        <section id="portfolio-section">
-            <div class="portfolio-content">
-                <section id="about-me-section" class="portfolio-card">
-                    <h2>About Me</h2>
-                    <p>I am S. Suriya, a second-year undergraduate student pursuing B.Tech in Computer Science and Business Systems (CSBS) at Rajalakshmi Engineering College, Chennai. I am passionate about using technology to solve real-world problems and have a particular interest in the field of Artificial Intelligence. I enjoy exploring AI-based tools and platforms such as ChatGPT, DeepSeek, and Gemini, which I often utilize to enhance both my academic understanding and problem-solving abilities. As a learner committed to growth, I continuously seek opportunities to upskill, explore new technologies, and apply my knowledge practically.</p>
-                </section>
-
-                <section id="education-section" class="portfolio-card">
-                    <h2>Education</h2>
-                    <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
-                    <p>Rajalakshmi Engineering College, Chennai</p>
-                    <p>2024 – 2028</p>
-                    <p>Current CGPA: 8.14</p>
-                    <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
-                    <p>Completed full schooling up to Class 12 at the same institution</p>
-                    <p>Year of Completion: 2024</p>
-                </section>
-
-                <section id="skills-section" class="portfolio-card">
-                    <h2>Technical Skills</h2>
-                    <ul>
-                        <li><strong>Programming Languages:</strong> C, Python, Java (currently learning)</li>
-                        <li><strong>Data Structures and Algorithms (DSA):</strong> Core concepts and applications</li>
-                        <li><strong>Artificial Intelligence Tools:</strong> Proficient in applying AI tools like ChatGPT, DeepSeek, and Gemini for academic support and creative problem-solving</li>
-                        <li><strong>Problem Solving:</strong> Strong inclination toward logic-building and using code for efficient solutions</li>
-                    </ul>
-                    <h3>Tools and Platforms</h3>
-                    <ul>
-                        <li><strong>TryHackMe:</strong> Engaging in cybersecurity basics and simulations to strengthen awareness and skills</li>
-                        <li><strong>Git & GitHub:</strong> Version control and collaborative coding using repositories</li>
-                        <li><strong>GeeksforGeeks:</strong> Regularly used for understanding computer science concepts and practicing coding problems</li>
-                    </ul>
-                    <p>These platforms support my academic learning and help me build practical knowledge and skills efficiently.</p>
-                </section>
-
-                <section id="current-focus-section" class="portfolio-card">
-                    <h2>My Current Focus</h2>
-                    <p>At present, I am deeply focused on enhancing my coding abilities, completing certification courses, and building simple but effective projects. I am actively learning Java and Database Management Systems to expand my technical foundation. Additionally, I am exploring multiple AI platforms to understand their real-world applications and integrate them into my problem-solving approach.</p>
-                </section>
-
-                <section id="certifications-section" class="portfolio-card">
-                    <h2>Certifications</h2>
-                    <ul>
-                        <li><strong>Python Foundation Certificate:</strong> Completed through Infosys Springboard, recognizing my foundational skills in Python programming</li>
-                        <li><strong>Cybersecurity Virtual Job Simulation:</strong> Successfully completed a Cyber Job Simulation with Deloitte, gaining insights into real-world cybersecurity tasks and workplace scenarios</li>
-                        <li><strong>MongoDB Basics for Students Certificate:</strong> Completed through MongoDB University, validating foundational knowledge in MongoDB database management</li>
-                    </ul>
-                </section>
-
-                <section id="contact-section" class="portfolio-card contact-form-section">
-                    <h2>Get In Touch</h2>
-                    <form action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://suriya777.netlify.app/">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="Name" required placeholder="Your name">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="Email" required placeholder="yourname@xyz.com">
-                        <label for="reason">Reason for reaching out:</label>
-                        <select id="reason" name="Reason for reaching out" required>
-                            <option value="" disabled selected>Select a reason</option>
-                            <option value="Internship opportunity">Internship opportunity</option>
-                            <option value="Project collaboration">Project collaboration</option>
-                            <option value="Portfolio feedback">Portfolio feedback</option>
-                            <option value="Offering mentorship or career advice">Offering mentorship or career advice</option>
-                            <option value="Other">Other</option>
-                        </select>
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="Message" rows="7" required placeholder="Your message"></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                    <div class="social-links">
-                        <a href="mailto:dnssuriya@gmail.com" aria-label="Personal Email"><i class="fas fa-envelope"></i> Personal Email</a>
-                        <a href="mailto:suriya.s.2024.csbs@rajalakshmi.edu.in" aria-label="College Email"><i class="fas fa-envelope-square"></i> College Email</a>
-                        <a href="https://github.com/suriyadns" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://www.linkedin.com/in/suriya-s-bababa340" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://www.instagram.com/suriya.__777/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                    </div>
-                    <p class="proverb">"The future belongs to those who learn more skills and combine them in creative ways."</p>
-                </section>
-            </div>
+        <section id="about-me-section" class="portfolio-card">
+            <h2>About Me</h2>
+            <p>I am S. Suriya, a second-year undergraduate student pursuing B.Tech in Computer Science and Business Systems (CSBS) at Rajalakshmi Engineering College, Chennai. I am passionate about using technology to solve real-world problems and have a particular interest in the field of Artificial Intelligence. I enjoy exploring AI-based tools and platforms such as ChatGPT, DeepSeek, and Gemini, which I often utilize to enhance both my academic understanding and problem-solving abilities. As a learner committed to growth, I continuously seek opportunities to upskill, explore new technologies, and apply my knowledge practically.</p>
         </section>
 
-        <section id="resume-section" class="hidden">
+        <section id="education-section" class="portfolio-card">
+            <h2>Education</h2>
+            <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
+            <p>Rajalakshmi Engineering College, Chennai</p>
+            <p>2024 – 2028</p>
+            <p>Current CGPA: 8.14</p>
+            <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
+            <p>Completed full schooling up to Class 12 at the same institution</p>
+            <p>Year of Completion: 2024</p>
+        </section>
+
+        <section id="skills-section" class="portfolio-card">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> C, Python, Java (currently learning)</li>
+                <li><strong>Data Structures and Algorithms (DSA):</strong> Core concepts and applications</li>
+                <li><strong>Artificial Intelligence Tools:</strong> Proficient in applying AI tools like ChatGPT, DeepSeek, and Gemini for academic support and creative problem-solving</li>
+                <li><strong>Problem Solving:</strong> Strong inclination toward logic-building and using code for efficient solutions</li>
+            </ul>
+            <h3>Tools and Platforms</h3>
+            <ul>
+                <li><strong>TryHackMe:</strong> Engaging in cybersecurity basics and simulations to strengthen awareness and skills</li>
+                <li><strong>Git & GitHub:</strong> Version control and collaborative coding using repositories</li>
+                <li><strong>GeeksforGeeks:</strong> Regularly used for understanding computer science concepts and practicing coding problems</li>
+            </ul>
+            <p>These platforms support my academic learning and help me build practical knowledge and skills efficiently.</p>
+        </section>
+
+        <section id="current-focus-section" class="portfolio-card">
+            <h2>My Current Focus</h2>
+            <p>At present, I am deeply focused on enhancing my coding abilities, completing certification courses, and building simple but effective projects. I am actively learning Java and Database Management Systems to expand my technical foundation. Additionally, I am exploring multiple AI platforms to understand their real-world applications and integrate them into my problem-solving approach.</p>
+        </section>
+
+        <section id="certifications-section" class="portfolio-card">
+            <h2>Certifications</h2>
+            <ul>
+                <li><strong>Python Foundation Certificate:</strong> Completed through Infosys Springboard, recognizing my foundational skills in Python programming</li>
+                <li><strong>Cybersecurity Virtual Job Simulation:</strong> Successfully completed a Cyber Job Simulation with Deloitte, gaining insights into real-world cybersecurity tasks and workplace scenarios</li>
+                <li><strong>MongoDB Basics for Students Certificate:</strong> Completed through MongoDB University, validating foundational knowledge in MongoDB database management</li>
+            </ul>
+        </section>
+
+        <section id="contact-section" class="portfolio-card contact-form-section">
+            <h2>Get In Touch</h2>
+            <form action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://suriya777.netlify.app/">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" required placeholder="Your name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="Email" required placeholder="yourname@xyz.com">
+                <label for="reason">Reason for reaching out:</label>
+                <select id="reason" name="Reason for reaching out" required>
+                    <option value="" disabled selected>Select a reason</option>
+                    <option value="Internship opportunity">Internship opportunity</option>
+                    <option value="Project collaboration">Project collaboration</option>
+                    <option value="Portfolio feedback">Portfolio feedback</option>
+                    <option value="Offering mentorship or career advice">Offering mentorship or career advice</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="Message" rows="7" required placeholder="Your message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="mailto:dnssuriya@gmail.com" aria-label="Personal Email"><i class="fas fa-envelope"></i> Personal Email</a>
+                <a href="mailto:suriya.s.2024.csbs@rajalakshmi.edu.in" aria-label="College Email"><i class="fas fa-envelope-square"></i> College Email</a>
+                <a href="https://github.com/suriyadns" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/suriya-s-bababa340" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/suriya.__777/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <p class="proverb">"The future belongs to those who learn more skills and combine them in creative ways."</p>
+        </section>
+
+        <section id="resume-section" class="portfolio-card">
             <h1>S. SURIYA</h1>
             <div class="resume-header-info">
                 <span>2nd Year B.Tech Student – Computer Science and Business Systems</span>
@@ -728,9 +724,9 @@
                 <a href="path/to/your/s_suriya_resume.pdf" download="S.Suriya_Resume.pdf">
                     <button>Download Resume</button>
                 </a>
-                <button id="back-to-home-btn">Back to Home</button>
             </div>
         </section>
+
         <p id="global-proverb">"Success is not final, failure is not fatal: it is the courage to continue that counts."</p>
     </main>
 
@@ -740,81 +736,39 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const sections = {
-                intro: document.getElementById('intro-section'),
-                portfolio: document.getElementById('portfolio-section'),
-                resume: document.getElementById('resume-section')
-            };
             const navLinks = document.querySelectorAll('.nav-links a');
             const hamburgerMenu = document.getElementById('hamburger-menu');
-
-            function toggleSections(sectionId) {
-                for (const key in sections) {
-                    sections[key].classList.add('hidden');
-                }
-                if (sections[sectionId]) {
-                    sections[sectionId].classList.remove('hidden');
-                }
-                navLinks.forEach(link => link.classList.remove('active'));
-            }
-
-            function updateActiveLink() {
-                const scrollPosition = window.scrollY + window.innerHeight / 2;
-                document.querySelectorAll('section').forEach(section => {
-                    const id = section.getAttribute('id');
-                    if (section.classList.contains('hidden') || id === 'intro-section') return;
-                    
-                    const top = section.offsetTop;
-                    const bottom = top + section.offsetHeight;
-                    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-                    
-                    if (link && scrollPosition >= top && scrollPosition < bottom) {
-                        link.classList.add('active');
-                    } else if (link) {
-                        link.classList.remove('active');
-                    }
-                });
-            }
-
-            toggleSections('intro');
-
-            document.getElementById('learn-more-btn').addEventListener('click', () => {
-                toggleSections('portfolio');
-                document.getElementById('about-me-section').scrollIntoView();
-            });
-
-            document.getElementById('get-in-touch-btn').addEventListener('click', () => {
-                toggleSections('portfolio');
-                document.getElementById('contact-section').scrollIntoView();
-            });
-
-            document.getElementById('back-to-home-btn').addEventListener('click', () => {
-                toggleSections('intro');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
 
             hamburgerMenu.addEventListener('click', () => {
                 document.getElementById('nav-links').classList.toggle('active');
             });
 
+            // Handle smooth scrolling for all links
             navLinks.forEach(link => {
                 link.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    const targetId = link.getAttribute('href').substring(1);
-                    if (link.id === 'resume-link') {
-                        toggleSections('resume');
-                    } else {
-                        toggleSections('portfolio');
-                        setTimeout(() => {
-                            document.getElementById(targetId).scrollIntoView();
-                        }, 50);
-                    }
+                    document.getElementById('nav-links').classList.remove('active');
                 });
             });
+            
+            // Highlight active link on scroll
+            const sections = document.querySelectorAll('section');
+            function updateActiveLink() {
+                const scrollPosition = window.scrollY + window.innerHeight / 2;
+                sections.forEach(section => {
+                    const id = section.getAttribute('id');
+                    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+
+                    if (link && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                        navLinks.forEach(navLink => navLink.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                });
+            }
 
             window.addEventListener('scroll', updateActiveLink);
-            window.addEventListener('resize', updateActiveLink);
+            updateActiveLink(); // Initial call to set the active link
         });
     </script>
 </body>
 </html>
+```
