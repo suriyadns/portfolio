@@ -2,138 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="S. Suriya - Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems. Explore my skills, projects, and education.">
-<meta name="keywords" content="S. Suriya, Suriya, Portfolio, Computer Science, Business Systems, CSBS, Artificial Intelligence, AI, Machine Learning, Python, C, Java, DSA, Developer, Student, Rajalakshmi Engineering College, Chennai">
-<meta name="author" content="S. Suriya">
-<meta name="robots" content="index, follow"> <link rel="canonical" href="https://suriya777.netlify.app/"> <meta property="og:title" content="S. Suriya - AI & Computer Science Student Portfolio">
-<meta property="og:description" content="Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems. Explore my skills, projects, and education.">
-<meta property="og:image" content="https://suriya777.netlify.app/images/suriya-portfolio-preview.jpg"> <meta property="og:url" content="https://suriya777.netlify.app/"> <meta property="og:type" content="website">
-<meta property="og:site_name" content="S. Suriya's Portfolio">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@yourtwitterhandle"> <meta name="twitter:creator" content="@yourtwitterhandle"> <meta name="twitter:title" content="S. Suriya - AI & Computer Science Student Portfolio">
-<meta name="twitter:description" content="Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems. Explore my skills, projects, and education.">
-<meta name="twitter:image" content="https://suriya777.netlify.app/images/suriya-portfolio-preview.jpg"> <link rel="icon" href="https://suriya777.netlify.app/favicon.ico" type="image/x-icon"> ```
-
-
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S. Suriya - My Portfolio</title>
+    <meta name="description" content="S. Suriya - A passionate B.Tech CSBS student specializing in AI, programming, and cybersecurity. Explore my skills, projects, and certifications.">
+    <meta name="keywords" content="S. Suriya, Suriya, Portfolio, Computer Science, Business Systems, CSBS, Artificial Intelligence, AI, Machine Learning, Python, C, Java, DSA, Developer, Student, Rajalakshmi Engineering College, Chennai, Cybersecurity, TryHackMe">
+    <meta name="author" content="S. Suriya">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://suriya777.netlify.app/">
+    <meta property="og:title" content="S. Suriya - AI & Computer Science Student Portfolio">
+    <meta property="og:description" content="Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems.">
+    <meta property="og:image" content="https://suriya777.netlify.app/images/suriya-portfolio-preview.jpg">
+    <meta property="og:url" content="https://suriya777.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="S. Suriya's Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yourtwitterhandle">
+    <meta name="twitter:creator" content="@yourtwitterhandle">
+    <meta name="twitter:title" content="S. Suriya - AI & Computer Science Student Portfolio">
+    <meta name="twitter:description" content="Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems.">
+    <meta name="twitter:image" content="https://suriya777.netlify.app/images/suriya-portfolio-preview.jpg">
+    <link rel="icon" href="https://suriya777.netlify.app/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* --- CSS Styling for Aesthetic Theme --- */
-
+        /* --- High-Class Professional Theme --- */
         :root {
-            --primary-color: #2c3e50; /* Dark Blue/Charcoal - for header, strong text */
-            --accent-color-1: #3498db; /* Vibrant Blue - for buttons, highlights, borders */
-            --accent-color-2: #ecf0f1; /* Light Gray/Off-white - for secondary backgrounds */
-            --text-color: #333333; /* Darker gray for main text */
-            --background-color: #f8f9fa; /* Very Light Gray - for main page background */
-            --card-background: #ffffff; /* White - for content cards */
-            --border-color: #ddd; /* Light gray for input borders */
+            --primary-dark: #1a1a1a;
+            --secondary-dark: #222222;
+            --text-light: #e0e0e0;
+            --accent-blue: #00a2ff;
+            --subtle-gray: #444444;
+            --button-text: #ffffff;
         }
 
-        /* Basic Reset & Body Styling */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.7; /* Improved readability */
-            color: var(--text-color);
-            background-color: var(--background-color);
+            line-height: 1.7;
+            color: var(--text-light);
+            background-color: var(--primary-dark);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
         }
 
-        /* Header & Navigation */
         header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
             top: 0;
+            width: 100%;
             z-index: 1000;
             display: flex;
-            justify-content: flex-end; /* Align hamburger/nav to the right */
+            justify-content: flex-end;
             align-items: center;
         }
 
         .hamburger-menu {
-            display: none; /* Hidden by default on larger screens */
-            font-size: 1.8rem;
+            display: none;
+            font-size: 2rem;
             cursor: pointer;
-            color: white;
+            color: var(--accent-blue);
         }
 
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 2rem;
-            margin-left: auto; /* Push links to the right */
+            gap: 2.5rem;
+            margin-left: auto;
         }
 
         .nav-links li a {
-            color: white;
+            color: var(--text-light);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            cursor: pointer;
         }
 
-        .nav-links li a:hover {
-            color: var(--accent-color-1);
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--accent-blue);
         }
 
-        /* Main Content Area */
         main {
-            flex: 1; /* Allows main content to grow and push footer down */
-            padding: 2rem;
-            padding-top: 80px; /* Space for fixed header */
-            max-width: 1200px; /* Max width for content for better readability */
-            margin: 0 auto; /* Center the content */
+            flex: 1;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
             width: 100%;
         }
 
-        /* Generic Section Styling */
         section {
-            margin-bottom: 3rem;
-            padding: 2.5rem; /* Increased padding */
-            background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Softer, deeper shadow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 5rem;
+            padding: 3rem;
+            background-color: var(--secondary-dark);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced hover effect */
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
         }
 
         .hidden {
             display: none;
         }
 
-        /* Intro Section */
         #intro-section {
             text-align: center;
-            padding: 6rem 2rem; /* More vertical space */
-            background-color: transparent; /* No card background for intro */
+            padding: 8rem 2rem;
+            background-color: transparent;
             box-shadow: none;
         }
 
         #intro-section h1 {
-            font-size: 4rem; /* Larger font size */
-            color: var(--primary-color);
-            margin-bottom: 2.5rem;
+            font-size: 5rem;
+            color: var(--accent-blue);
+            margin-bottom: 3rem;
             font-weight: 700;
             line-height: 1.2;
         }
@@ -141,313 +139,317 @@
         .intro-buttons {
             display: flex;
             justify-content: center;
-            gap: 2rem; /* Space between buttons */
-        }
-
-        .intro-buttons button {
-            background-color: var(--accent-color-1);
-            color: white;
-            border: none;
-            padding: 1.2rem 3rem; /* Larger buttons */
-            border-radius: 50px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .intro-buttons button:hover {
-            background-color: #2980b9; /* Slightly darker blue */
-            transform: translateY(-3px); /* More pronounced lift */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Portfolio Content Sections */
-        .portfolio-content {
-            display: flex;
-            flex-direction: column;
             gap: 2.5rem;
         }
 
-        .portfolio-card h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 2.2rem; /* Larger heading for sections */
-            border-bottom: 3px solid var(--accent-color-1); /* Thicker border */
-            padding-bottom: 0.8rem;
-            display: inline-block; /* Make border-bottom only as wide as text */
+        .intro-buttons button {
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--button-text);
+            border: 2px solid var(--accent-blue);
+            padding: 1.5rem 4rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
             font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .intro-buttons button:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 162, 255, 0.4);
+        }
+
+        .portfolio-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .portfolio-card h2 {
+            color: var(--accent-blue);
+            margin-bottom: 1.8rem;
+            font-size: 2.8rem;
+            font-weight: 600;
+            border-bottom: 2px solid var(--subtle-gray);
+            padding-bottom: 1rem;
+            display: inline-block;
         }
 
         .portfolio-card h3 {
-            color: var(--accent-color-1);
-            margin-top: 2rem; /* More space above subheadings */
-            margin-bottom: 0.8rem;
-            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
             font-weight: 600;
         }
 
         .portfolio-card p {
             margin-bottom: 1rem;
+            color: var(--text-light);
         }
 
         .portfolio-card ul {
             list-style: none;
             padding-left: 0;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
 
         .portfolio-card ul li {
-            margin-bottom: 1rem;
-            padding-left: 1.8rem; /* More space for custom bullet */
+            margin-bottom: 1.2rem;
+            padding-left: 2rem;
             position: relative;
+            color: var(--text-light);
         }
 
         .portfolio-card ul li::before {
-            content: "\2022"; /* Unicode for bullet point */
-            color: var(--accent-color-1);
+            content: "•";
+            color: var(--accent-blue);
             font-weight: bold;
             display: inline-block;
             width: 1em;
-            margin-left: -1.8em;
+            margin-left: -1em;
             position: absolute;
-            font-size: 1.2em; /* Larger bullet */
+            font-size: 1.5em;
         }
 
-        /* Contact Form Styling */
         .contact-form-section h2 {
             text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 2.5rem;
+            font-size: 3rem;
+            color: var(--accent-blue);
+            margin-bottom: 3rem;
             font-weight: 700;
         }
 
         .contact-form-section form {
             display: flex;
             flex-direction: column;
-            gap: 1.8rem; /* More space between form elements */
-            max-width: 650px; /* Slightly wider form */
+            gap: 2rem;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 2.5rem;
-            background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            padding: 3rem;
+            background-color: var(--primary-dark);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
 
         .contact-form-section label {
             font-weight: 600;
-            color: var(--text-color);
-            margin-bottom: 0.4rem;
-            display: block; /* Ensures label takes its own line */
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: block;
         }
 
         .contact-form-section input[type="text"],
         .contact-form-section input[type="email"],
         .contact-form-section select,
         .contact-form-section textarea {
-            padding: 1rem; /* Larger input fields */
-            border: 1px solid var(--border-color);
-            border-radius: 6px; /* Slightly more rounded corners */
-            font-size: 1.05rem;
+            padding: 1.2rem;
+            border: 1px solid var(--subtle-gray);
+            border-radius: 8px;
+            font-size: 1.1rem;
             width: 100%;
+            background-color: var(--secondary-dark);
+            color: var(--text-light);
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .contact-form-section input:focus,
         .contact-form-section select:focus,
         .contact-form-section textarea:focus {
-            border-color: var(--accent-color-1);
+            border-color: var(--accent-blue);
             outline: none;
-            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.25); /* More prominent focus ring */
+            box-shadow: 0 0 0 5px rgba(0, 162, 255, 0.25);
         }
 
         .contact-form-section textarea {
             resize: vertical;
-            min-height: 150px; /* Taller textarea */
+            min-height: 180px;
         }
 
         .contact-form-section button {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--accent-blue);
+            color: var(--button-text);
             border: none;
-            padding: 1.2rem 2.8rem;
+            padding: 1.5rem 3.5rem;
             border-radius: 50px;
-            font-size: 1.15rem;
+            font-size: 1.25rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            align-self: flex-end; /* Align button to the right */
-            margin-top: 1.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            align-self: flex-end;
+            margin-top: 2rem;
+            box-shadow: 0 6px 20px rgba(0, 162, 255, 0.3);
         }
 
         .contact-form-section button:hover {
-            background-color: #1a242f; /* Darker primary on hover */
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background-color: #0087d1;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 162, 255, 0.5);
         }
 
-        .form-note {
-            font-size: 0.95rem;
-            color: #666;
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        /* Social Media Icons */
         .social-links {
             text-align: center;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--subtle-gray);
         }
 
         .social-links a {
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin: 0 0.8rem;
-            transition: color 0.3s ease, transform 0.2s ease;
+            color: var(--text-light);
+            font-size: 2.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .social-links a:hover {
-            color: var(--accent-color-1);
-            transform: scale(1.1);
+            color: var(--accent-blue);
+            transform: scale(1.2);
         }
 
-        /* Proverb Styling */
         .proverb {
             text-align: center;
             font-style: italic;
-            color: #666;
-            margin-top: 2rem;
-            font-size: 1.1rem;
+            color: #999;
+            margin-top: 3rem;
+            font-size: 1.2rem;
         }
 
-        /* Resume Section Styling */
         #resume-section {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-            padding: 2.5rem;
-            max-width: 800px; /* A bit narrower for resume readability */
-            margin: 0 auto 3rem auto; /* Center it */
+            background-color: var(--secondary-dark);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto 5rem auto;
         }
 
         #resume-section h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
             text-align: center;
         }
 
         #resume-section h2 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--accent-color-1);
-            padding-bottom: 0.5rem;
+            font-size: 2.2rem;
+            color: var(--text-light);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--subtle-gray);
+            padding-bottom: 0.8rem;
         }
 
         #resume-section .resume-header-info {
             text-align: center;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-            color: #555;
+            margin-bottom: 2.5rem;
+            font-size: 1.2rem;
+            color: #aaa;
         }
+
         #resume-section .resume-header-info span {
             display: block;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
         }
+
         #resume-section .resume-header-info a {
-            color: var(--accent-color-1);
+            color: var(--accent-blue);
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         #resume-section .resume-header-info a:hover {
-            color: var(--primary-color);
+            color: var(--text-light);
             text-decoration: underline;
         }
 
         #resume-section strong {
-            color: var(--primary-color);
+            color: var(--accent-blue);
         }
 
         #resume-section ul {
             list-style: none;
-            padding-left: 1.5rem; /* Indent lists slightly */
-            margin-bottom: 1rem;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
         }
+
         #resume-section ul li {
             position: relative;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
+
         #resume-section ul li::before {
-            content: "\2022"; /* Bullet point */
-            color: var(--accent-color-1);
+            content: "•";
+            color: var(--accent-blue);
             font-weight: bold;
             display: inline-block;
             width: 1em;
-            margin-left: -1.5em;
+            margin-left: -1em;
             position: absolute;
         }
-        
+
         #resume-section p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .resume-buttons {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
 
-        .resume-buttons button {
-            background-color: var(--primary-color);
-            color: white;
+        .resume-buttons a button {
+            background-color: var(--accent-blue);
+            color: var(--button-text);
             border: none;
-            padding: 1rem 2.5rem;
-            margin: 0.5rem 1rem;
+            padding: 1.2rem 3rem;
+            margin: 0.8rem 1.5rem;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 162, 255, 0.3);
         }
 
         .resume-buttons button:hover {
-            background-color: #1a242f; /* Darker primary */
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background-color: #0087d1;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 162, 255, 0.5);
         }
 
-        /* Global Proverb (at the bottom of main) */
         #global-proverb {
             text-align: center;
             font-style: italic;
-            color: #555;
-            margin-top: 5rem; /* More space above footer */
-            margin-bottom: 3rem;
-            font-size: 1.2rem;
-            max-width: 800px;
+            color: #999;
+            margin-top: 6rem;
+            margin-bottom: 4rem;
+            font-size: 1.3rem;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary-dark);
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--subtle-gray);
+        }
 
-        /* --- Responsive Design --- */
         @media (max-width: 768px) {
             header {
-                padding: 1rem 1.5rem;
-                justify-content: space-between; /* Hamburger to right, no explicit space-around for nav links as they stack */
+                padding: 1.2rem 1.5rem;
             }
 
             .nav-links {
-                display: none; /* Hide by default on mobile */
+                display: none;
                 flex-direction: column;
                 width: 100%;
-                background-color: var(--primary-color);
+                background-color: var(--primary-dark);
                 position: absolute;
-                top: 70px; /* Below header */
+                top: 80px;
                 left: 0;
                 padding: 1rem 0;
                 text-align: center;
@@ -455,7 +457,7 @@
             }
 
             .nav-links.active {
-                display: flex; /* Show when active */
+                display: flex;
             }
 
             .nav-links li {
@@ -463,60 +465,60 @@
             }
 
             .hamburger-menu {
-                display: block; /* Show hamburger on smaller screens */
+                display: block;
             }
 
             #intro-section {
-                padding: 4rem 1rem;
+                padding: 5rem 1rem;
             }
 
             #intro-section h1 {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
 
             .intro-buttons {
                 flex-direction: column;
-                gap: 1.2rem;
+                gap: 1.5rem;
             }
 
             .intro-buttons button {
                 width: 90%;
-                max-width: 300px;
-                padding: 1rem 2rem;
-                font-size: 1.1rem;
+                max-width: 350px;
+                padding: 1.2rem 2.5rem;
+                font-size: 1.2rem;
             }
 
             main {
-                padding: 1rem;
-                padding-top: 70px; /* Adjust for smaller header on mobile */
+                padding: 2rem 1rem;
             }
 
             section {
-                padding: 1.8rem;
-                margin-bottom: 2rem;
+                padding: 2rem;
+                margin-bottom: 3rem;
             }
 
             .portfolio-card h2 {
-                font-size: 1.9rem;
+                font-size: 2.2rem;
+                padding-bottom: 0.6rem;
             }
 
             .portfolio-card h3 {
-                font-size: 1.3rem;
+                font-size: 1.6rem;
             }
 
             .contact-form-section form {
-                padding: 1.5rem;
-                gap: 1.2rem;
+                padding: 2rem;
+                gap: 1.5rem;
             }
 
             .contact-form-section button {
-                padding: 1rem 2rem;
-                font-size: 1.05rem;
+                padding: 1.2rem 2.5rem;
+                font-size: 1.15rem;
             }
 
             .social-links a {
-                font-size: 1.8rem;
-                margin: 0 0.6rem;
+                font-size: 2rem;
+                margin: 0 0.8rem;
             }
 
             .proverb {
@@ -524,42 +526,43 @@
             }
 
             #resume-section {
-                padding: 1.5rem;
+                padding: 2rem;
             }
+
             #resume-section h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
+
             #resume-section h2 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
+
             #resume-section .resume-header-info {
-                font-size: 0.95rem;
-            }
-            .resume-buttons button {
-                width: 80%;
-                margin: 0.5rem auto;
-            }
-            #global-proverb {
                 font-size: 1rem;
-                margin-top: 3rem;
+            }
+
+            .resume-buttons a button {
+                width: 80%;
+                margin: 0.6rem auto;
             }
         }
 
         @media (max-width: 480px) {
             #intro-section h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
 
             section {
-                padding: 1.2rem;
+                padding: 1.5rem;
             }
 
             .portfolio-card h2 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -570,15 +573,15 @@
                 <li><a href="#about-me-section">About Me</a></li>
                 <li><a href="#education-section">Education</a></li>
                 <li><a href="#skills-section">Skills</a></li>
-                <li><a href="#achievements-section">Achievements</a></li>
-                <li><a href="#" id="contact-nav-link">Contact</a></li>
+                <li><a href="#certifications-section">Certifications</a></li>
+                <li><a href="#contact-section">Contact</a></li>
                 <li><a href="#" id="resume-link">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="intro-section" class="active">
+        <section id="intro-section">
             <h1>Hi, I'm S. Suriya</h1>
             <div class="intro-buttons">
                 <button id="learn-more-btn">Learn More</button>
@@ -586,7 +589,7 @@
             </div>
         </section>
 
-        <section id="portfolio-section" class="hidden">
+        <section id="portfolio-section">
             <div class="portfolio-content">
                 <section id="about-me-section" class="portfolio-card">
                     <h2>About Me</h2>
@@ -597,7 +600,7 @@
                     <h2>Education</h2>
                     <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
                     <p>Rajalakshmi Engineering College, Chennai</p>
-                    <p>2023 – Present</p>
+                    <p>2024 – 2028</p>
                     <p>Current CGPA: 8.14</p>
                     <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
                     <p>Completed full schooling up to Class 12 at the same institution</p>
@@ -626,29 +629,27 @@
                     <p>At present, I am deeply focused on enhancing my coding abilities, completing certification courses, and building simple but effective projects. I am actively learning Java and Database Management Systems to expand my technical foundation. Additionally, I am exploring multiple AI platforms to understand their real-world applications and integrate them into my problem-solving approach.</p>
                 </section>
 
-                <section id="achievements-section" class="portfolio-card">
-                    <h2>Achievements</h2>
+                <section id="certifications-section" class="portfolio-card">
+                    <h2>Certifications</h2>
                     <ul>
                         <li><strong>Python Foundation Certificate:</strong> Completed through Infosys Springboard, recognizing my foundational skills in Python programming</li>
                         <li><strong>Cybersecurity Virtual Job Simulation:</strong> Successfully completed a Cyber Job Simulation with Deloitte, gaining insights into real-world cybersecurity tasks and workplace scenarios</li>
+                        <li><strong>MongoDB Basics for Students Certificate:</strong> Completed through MongoDB University, validating foundational knowledge in MongoDB database management</li>
                     </ul>
                 </section>
 
-                <section id="contact-section-inside" class="portfolio-card contact-form-section">
+                <section id="contact-section" class="portfolio-card contact-form-section">
                     <h2>Get In Touch</h2>
-                    <form class="contact-form-section-form" action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="YOUR_PORTFOLIO_URL#intro-section">
-
-                        <label for="name-inside">Name:</label>
-                        <input type="text" id="name-inside" name="Name" required placeholder="Your name">
-
-                        <label for="email-inside">Email:</label>
-                        <input type="email" id="email-inside" name="Email" required placeholder="yourname@xyz.com">
-
-                        <label for="reason-inside">Reason for reaching out:</label>
-                        <select id="reason-inside" name="Reason for reaching out" required>
+                        <input type="hidden" name="_next" value="https://suriya777.netlify.app/">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="Name" required placeholder="Your name">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="Email" required placeholder="yourname@xyz.com">
+                        <label for="reason">Reason for reaching out:</label>
+                        <select id="reason" name="Reason for reaching out" required>
                             <option value="" disabled selected>Select a reason</option>
                             <option value="Internship opportunity">Internship opportunity</option>
                             <option value="Project collaboration">Project collaboration</option>
@@ -656,10 +657,8 @@
                             <option value="Offering mentorship or career advice">Offering mentorship or career advice</option>
                             <option value="Other">Other</option>
                         </select>
-
-                        <label for="message-inside">Your Message:</label>
-                        <textarea id="message-inside" name="Message" rows="7" required placeholder="Your message"></textarea>
-
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="Message" rows="7" required placeholder="Your message"></textarea>
                         <button type="submit">Send Message</button>
                     </form>
                     <div class="social-links">
@@ -672,44 +671,6 @@
                     <p class="proverb">"The future belongs to those who learn more skills and combine them in creative ways."</p>
                 </section>
             </div>
-        </section>
-
-        <section id="contact-section-outside" class="hidden contact-form-section">
-            <h2>Get In Touch</h2>
-            <form class="contact-form-section-form" action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="YOUR_PORTFOLIO_URL#intro-section">
-
-                <label for="name-outside">Name:</label>
-                <input type="text" id="name-outside" name="Name" required placeholder="Your name">
-
-                <label for="email-outside">Email:</label>
-                <input type="email" id="email-outside" name="Email" required placeholder="yourname@xyz.com">
-
-                <label for="reason-outside">Reason for reaching out:</label>
-                <select id="reason-outside" name="Reason for reaching out" required>
-                    <option value="" disabled selected>Select a reason</option>
-                    <option value="Internship opportunity">Internship opportunity</option>
-                    <option value="Project collaboration">Project collaboration</option>
-                    <option value="Portfolio feedback">Portfolio feedback</option>
-                    <option value="Offering mentorship or career advice">Offering mentorship or career advice</option>
-                    <option value="Other">Other</option>
-                </select>
-
-                <label for="message-outside">Your Message:</label>
-                <textarea id="message-outside" name="Message" rows="7" required placeholder="Your message"></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-            <div class="social-links">
-                <a href="mailto:dnssuriya@gmail.com" aria-label="Personal Email"><i class="fas fa-envelope"></i> Personal Email</a>
-                <a href="mailto:suriya.s.2024.csbs@rajalakshmi.edu.in" aria-label="College Email"><i class="fas fa-envelope-square"></i> College Email</a>
-                <a href="https://github.com/suriyadns" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/suriya-s-bababa340" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.instagram.com/suriya.__777/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-            </div>
-            <p class="proverb">"The best way to predict the future is to create it."</p>
         </section>
 
         <section id="resume-section" class="hidden">
@@ -730,7 +691,7 @@
             <h2>EDUCATION</h2>
             <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
             <p>Rajalakshmi Engineering College, Chennai</p>
-            <p>2023 – Present</p>
+            <p>2024 – 2028</p>
             <p>Current CGPA: 8.14</p>
 
             <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
@@ -751,10 +712,11 @@
 
             <hr>
 
-            <h2>ACHIEVEMENTS & CERTIFICATIONS</h2>
+            <h2>CERTIFICATIONS</h2>
             <ul>
                 <li><strong>Python Foundation Certificate</strong> – Infosys Springboard</li>
                 <li><strong>Cybersecurity Virtual Job Simulation</strong> – Deloitte (Gained insights into real-world cybersecurity tasks)</li>
+                <li><strong>MongoDB Basics for Students Certificate</strong> – MongoDB University (Validating foundational knowledge in MongoDB database management)</li>
             </ul>
 
             <hr>
@@ -769,7 +731,6 @@
                 <button id="back-to-home-btn">Back to Home</button>
             </div>
         </section>
-
         <p id="global-proverb">"Success is not final, failure is not fatal: it is the courage to continue that counts."</p>
     </main>
 
@@ -778,83 +739,81 @@
     </footer>
 
     <script>
-        /* --- JavaScript for Interactivity --- */
-
         document.addEventListener('DOMContentLoaded', () => {
-            const introSection = document.getElementById('intro-section');
-            const portfolioSection = document.getElementById('portfolio-section');
-            const contactSectionOutside = document.getElementById('contact-section-outside'); // The separate contact section
-            const resumeSection = document.getElementById('resume-section'); // The new resume section
-
-            const learnMoreBtn = document.getElementById('learn-more-btn');
-            const getInTouchBtn = document.getElementById('get-in-touch-btn'); // The main "Get In Touch" button
-            const backToHomeBtn = document.getElementById('back-to-home-btn'); // New button
-
+            const sections = {
+                intro: document.getElementById('intro-section'),
+                portfolio: document.getElementById('portfolio-section'),
+                resume: document.getElementById('resume-section')
+            };
+            const navLinks = document.querySelectorAll('.nav-links a');
             const hamburgerMenu = document.getElementById('hamburger-menu');
-            const navLinks = document.getElementById('nav-links');
-            const navLinksList = navLinks.querySelectorAll('a');
 
-            // Function to show a specific section and hide others
-            function showSection(sectionToShow) {
-                introSection.classList.add('hidden');
-                portfolioSection.classList.add('hidden');
-                contactSectionOutside.classList.add('hidden');
-                resumeSection.classList.add('hidden'); 
-                
-                sectionToShow.classList.remove('hidden');
-                navLinks.classList.remove('active'); // Close mobile menu if open
-                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top of the shown section
+            function toggleSections(sectionId) {
+                for (const key in sections) {
+                    sections[key].classList.add('hidden');
+                }
+                if (sections[sectionId]) {
+                    sections[sectionId].classList.remove('hidden');
+                }
+                navLinks.forEach(link => link.classList.remove('active'));
             }
 
-            // Event Listeners for Intro Buttons
-            learnMoreBtn.addEventListener('click', () => {
-                showSection(portfolioSection);
-            });
-
-            getInTouchBtn.addEventListener('click', () => {
-                showSection(contactSectionOutside); // Show the separate contact form
-            });
-
-            // Back to Home button functionality (for resume section)
-            backToHomeBtn.addEventListener('click', () => {
-                showSection(introSection); // Show the initial home screen
-            });
-
-
-            // Hamburger Menu Toggle for Mobile
-            hamburgerMenu.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-
-            // Navigation Links Functionality
-            navLinksList.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault(); // Prevent default anchor jump
-
-                    const targetHref = link.getAttribute('href');
-
-                    if (link.id === 'contact-nav-link') {
-                        // Special handling for "Contact" in the navigation, always shows the outside contact form
-                        showSection(contactSectionOutside);
-                    } else if (link.id === 'resume-link') {
-                        // Handling for "Resume" - show the new resume section
-                        showSection(resumeSection);
-                    } else if (targetHref.startsWith('#')) {
-                        // For other internal portfolio sections (About Me, Education, Skills, Achievements, and inside-contact)
-                        showSection(portfolioSection); // Ensure portfolio is visible
-                        setTimeout(() => {
-                            const targetElement = document.querySelector(targetHref);
-                            if (targetElement) {
-                                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }
-                        }, 100); // Small delay to allow section to render before scrolling
+            function updateActiveLink() {
+                const scrollPosition = window.scrollY + window.innerHeight / 2;
+                document.querySelectorAll('section').forEach(section => {
+                    const id = section.getAttribute('id');
+                    if (section.classList.contains('hidden') || id === 'intro-section') return;
+                    
+                    const top = section.offsetTop;
+                    const bottom = top + section.offsetHeight;
+                    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+                    
+                    if (link && scrollPosition >= top && scrollPosition < bottom) {
+                        link.classList.add('active');
+                    } else if (link) {
+                        link.classList.remove('active');
                     }
-                    navLinks.classList.remove('active'); // Close mobile menu after click
+                });
+            }
+
+            toggleSections('intro');
+
+            document.getElementById('learn-more-btn').addEventListener('click', () => {
+                toggleSections('portfolio');
+                document.getElementById('about-me-section').scrollIntoView();
+            });
+
+            document.getElementById('get-in-touch-btn').addEventListener('click', () => {
+                toggleSections('portfolio');
+                document.getElementById('contact-section').scrollIntoView();
+            });
+
+            document.getElementById('back-to-home-btn').addEventListener('click', () => {
+                toggleSections('intro');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            hamburgerMenu.addEventListener('click', () => {
+                document.getElementById('nav-links').classList.toggle('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    if (link.id === 'resume-link') {
+                        toggleSections('resume');
+                    } else {
+                        toggleSections('portfolio');
+                        setTimeout(() => {
+                            document.getElementById(targetId).scrollIntoView();
+                        }, 50);
+                    }
                 });
             });
-            
-            // No custom JavaScript for form submission as FormSubmit.co handles it directly via the 'action' attribute
-            // We removed the handleMailtoSubmission function.
+
+            window.addEventListener('scroll', updateActiveLink);
+            window.addEventListener('resize', updateActiveLink);
         });
     </script>
 </body>
