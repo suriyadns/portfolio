@@ -1,756 +1,948 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="S. Suriya - A passionate B.Tech CSBS student specializing in AI, programming, and cybersecurity. Explore my skills, projects, and certifications.">
-    <meta name="keywords" content="S. Suriya, Suriya, Portfolio, Computer Science, Business Systems, CSBS, Artificial Intelligence, AI, Machine Learning, Python, C, Java, DSA, Developer, Student, Rajalakshmi Engineering College, Chennai, Cybersecurity, TryHackMe">
-    <meta name="author" content="S. Suriya">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://suriya777.netlify.app/">
-    <meta property="og:title" content="S. Suriya - AI & Computer Science Student Portfolio">
-    <meta property="og:description" content="Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems.">
-    <meta property="og:image" content="https://suriya777.netlify.app/images/suriya-portfolio-preview.jpg">
-    <meta property="og:url" content="https://suriya777.netlify.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="S. Suriya's Portfolio">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@yourtwitterhandle">
-    <meta name="twitter:creator" content="@yourtwitterhandle">
-    <meta name="twitter:title" content="S. Suriya - AI & Computer Science Student Portfolio">
-    <meta name="twitter:description" content="Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems.">
-    <meta name="twitter:image" content="https://suriya777.netlify.app/images/suriya-portfolio-preview.jpg">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="icon" href="https://suriya777.netlify.app/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="S. Suriya - A passionate B.Tech CSBS student specializing in AI, programming, and cybersecurity. Explore my skills, projects, and certifications." />
+    <meta
+      name="keywords"
+      content="S. Suriya, Suriya, Portfolio, Computer Science, Business Systems, CSBS, Artificial Intelligence, AI, Machine Learning, Python, C, Java, DSA, Developer, Student, Rajalakshmi Engineering College, Chennai, Cybersecurity, TryHackMe" />
+    <meta name="author" content="S. Suriya" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://suriya777.netlify.app/" />
+    <meta
+      property="og:title"
+      content="S. Suriya - AI & Computer Science Student Portfolio" />
+    <meta
+      property="og:description"
+      content="Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems." />
+    <meta
+      property="og:image"
+      content="https://suriya777.netlify.app/images/suriya-portfolio-preview.jpg" />
+    <meta property="og:url" content="https://suriya777.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="S. Suriya's Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@yourtwitterhandle" />
+    <meta name="twitter:creator" content="@yourtwitterhandle" />
+    <meta
+      name="twitter:title"
+      content="S. Suriya - AI & Computer Science Student Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Second-year B.Tech CSBS student passionate about AI, programming, and solving real-world problems." />
+    <meta
+      name="twitter:image"
+      content="https://suriya777.netlify.app/images/suriya-portfolio-preview.jpg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="icon"
+      href="https://suriya777.netlify.app/favicon.ico"
+      type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        /* --- High-Class Professional Theme --- */
-        :root {
-            --primary-dark: #1a1a1a;
-            --secondary-dark: #222222;
-            --text-light: #e0e0e0;
-            --accent-blue: #00a2ff;
-            --subtle-gray: #444444;
-            --button-text: #ffffff;
-        }
+      /* --- High-Class Professional Theme --- */
+      :root {
+        --primary-dark: #1a1a1a;
+        --secondary-dark: #222222;
+        --text-light: #e0e0e0;
+        --accent-blue: #00a2ff;
+        --subtle-gray: #444444;
+        --button-text: #ffffff;
+      }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
-            color: var(--text-light);
-            background-color: var(--primary-dark);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.7;
+        color: var(--text-light);
+        background-color: var(--primary-dark);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
+      header {
+        background-color: var(--primary-dark);
+        color: var(--text-light);
+        padding: 1.5rem 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .hamburger-menu {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--accent-blue);
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+        margin-left: auto;
+      }
+
+      .nav-links li a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .nav-links li a:hover,
+      .nav-links li a.active {
+        color: var(--accent-blue);
+      }
+
+      main {
+        flex: 1;
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      section {
+        margin-bottom: 5rem;
+        padding: 3rem;
+        background-color: var(--secondary-dark);
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      section:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      #intro-section {
+        text-align: center;
+        padding: 8rem 2rem;
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      #intro-section h1 {
+        font-size: 5rem;
+        color: var(--accent-blue);
+        margin-bottom: 3rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .intro-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+      }
+
+      .intro-buttons a button {
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--button-text);
+        border: 2px solid var(--accent-blue);
+        padding: 1.5rem 4rem;
+        border-radius: 50px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .intro-buttons a button:hover {
+        background-color: var(--accent-blue);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 162, 255, 0.4);
+      }
+
+      .portfolio-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+      }
+
+      .portfolio-card h2 {
+        color: var(--accent-blue);
+        margin-bottom: 1.8rem;
+        font-size: 2.8rem;
+        font-weight: 600;
+        border-bottom: 2px solid var(--subtle-gray);
+        padding-bottom: 1rem;
+        display: inline-block;
+      }
+
+      .portfolio-card h3 {
+        color: var(--text-light);
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .portfolio-card p {
+        margin-bottom: 1rem;
+        color: var(--text-light);
+      }
+
+      .portfolio-card ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+
+      .portfolio-card ul li {
+        margin-bottom: 1.2rem;
+        padding-left: 2rem;
+        position: relative;
+        color: var(--text-light);
+      }
+
+      .portfolio-card ul li::before {
+        content: "•";
+        color: var(--accent-blue);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        position: absolute;
+        font-size: 1.5em;
+      }
+
+      .contact-form-section h2 {
+        text-align: center;
+        font-size: 3rem;
+        color: var(--accent-blue);
+        margin-bottom: 3rem;
+        font-weight: 700;
+      }
+
+      .contact-form-section form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 3rem;
+        background-color: var(--primary-dark);
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .contact-form-section label {
+        font-weight: 600;
+        color: var(--text-light);
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .contact-form-section input[type="text"],
+      .contact-form-section input[type="email"],
+      .contact-form-section select,
+      .contact-form-section textarea {
+        padding: 1.2rem;
+        border: 1px solid var(--subtle-gray);
+        border-radius: 8px;
+        font-size: 1.1rem;
+        width: 100%;
+        background-color: var(--secondary-dark);
+        color: var(--text-light);
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .contact-form-section input:focus,
+      .contact-form-section select:focus,
+      .contact-form-section textarea:focus {
+        border-color: var(--accent-blue);
+        outline: none;
+        box-shadow: 0 0 0 5px rgba(0, 162, 255, 0.25);
+      }
+
+      .contact-form-section textarea {
+        resize: vertical;
+        min-height: 180px;
+      }
+
+      .contact-form-section button {
+        background-color: var(--accent-blue);
+        color: var(--button-text);
+        border: none;
+        padding: 1.5rem 3.5rem;
+        border-radius: 50px;
+        font-size: 1.25rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        align-self: flex-end;
+        margin-top: 2rem;
+        box-shadow: 0 6px 20px rgba(0, 162, 255, 0.3);
+      }
+
+      .contact-form-section button:hover {
+        background-color: #0087d1;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 162, 255, 0.5);
+      }
+
+      .social-links {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--subtle-gray);
+      }
+
+      .social-links a {
+        color: var(--text-light);
+        font-size: 2.5rem;
+        margin: 0 1rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: var(--accent-blue);
+        transform: scale(1.2);
+      }
+
+      .proverb {
+        text-align: center;
+        font-style: italic;
+        color: #999;
+        margin-top: 3rem;
+        font-size: 1.2rem;
+      }
+
+      #resume-section {
+        background-color: var(--secondary-dark);
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        padding: 3rem;
+        max-width: 900px;
+        margin: 0 auto 5rem auto;
+      }
+
+      #resume-section h1 {
+        font-size: 3rem;
+        color: var(--accent-blue);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      #resume-section h2 {
+        font-size: 2.2rem;
+        color: var(--text-light);
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid var(--subtle-gray);
+        padding-bottom: 0.8rem;
+      }
+
+      #resume-section .resume-header-info {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        font-size: 1.2rem;
+        color: #aaa;
+      }
+
+      #resume-section .resume-header-info span {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      #resume-section .resume-header-info a {
+        color: var(--accent-blue);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      #resume-section .resume-header-info a:hover {
+        color: var(--text-light);
+        text-decoration: underline;
+      }
+
+      #resume-section strong {
+        color: var(--accent-blue);
+      }
+
+      #resume-section ul {
+        list-style: none;
+        padding-left: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      #resume-section ul li {
+        position: relative;
+        margin-bottom: 0.8rem;
+      }
+
+      #resume-section ul li::before {
+        content: "•";
+        color: var(--accent-blue);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        position: absolute;
+      }
+
+      #resume-section p {
+        margin-bottom: 1.5rem;
+      }
+
+      .resume-buttons {
+        text-align: center;
+        margin-top: 4rem;
+      }
+
+      .resume-buttons a button {
+        background-color: var(--accent-blue);
+        color: var(--button-text);
+        border: none;
+        padding: 1.2rem 3rem;
+        margin: 0.8rem 1.5rem;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(0, 162, 255, 0.3);
+      }
+
+      .resume-buttons a button:hover {
+        background-color: #0087d1;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 162, 255, 0.5);
+      }
+
+      #global-proverb {
+        text-align: center;
+        font-style: italic;
+        color: #999;
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+        font-size: 1.3rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background-color: var(--secondary-dark);
+        color: #999;
+        font-size: 0.9rem;
+        border-top: 1px solid var(--subtle-gray);
+      }
+
+      @media (max-width: 768px) {
         header {
-            background-color: var(--primary-dark);
-            color: var(--text-light);
-            padding: 1.5rem 2rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .hamburger-menu {
-            display: none;
-            font-size: 2rem;
-            cursor: pointer;
-            color: var(--accent-blue);
+          padding: 1.2rem 1.5rem;
         }
 
         .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2.5rem;
-            margin-left: auto;
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: var(--primary-dark);
+          position: absolute;
+          top: 80px;
+          left: 0;
+          padding: 1rem 0;
+          text-align: center;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .nav-links li a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            cursor: pointer;
+        .nav-links.active {
+          display: flex;
         }
 
-        .nav-links li a:hover,
-        .nav-links li a.active {
-            color: var(--accent-blue);
+        .nav-links li {
+          margin: 0.8rem 0;
         }
 
-        main {
-            flex: 1;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        section {
-            margin-bottom: 5rem;
-            padding: 3rem;
-            background-color: var(--secondary-dark);
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        section:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .hidden {
-            display: none;
+        .hamburger-menu {
+          display: block;
         }
 
         #intro-section {
-            text-align: center;
-            padding: 8rem 2rem;
-            background-color: transparent;
-            box-shadow: none;
+          padding: 5rem 1rem;
         }
 
         #intro-section h1 {
-            font-size: 5rem;
-            color: var(--accent-blue);
-            margin-bottom: 3rem;
-            font-weight: 700;
-            line-height: 1.2;
+          font-size: 3.5rem;
         }
 
         .intro-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
+          flex-direction: column;
+          gap: 1.5rem;
         }
 
         .intro-buttons a button {
-            background: rgba(0, 0, 0, 0.2);
-            color: var(--button-text);
-            border: 2px solid var(--accent-blue);
-            padding: 1.5rem 4rem;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          width: 90%;
+          max-width: 350px;
+          padding: 1.2rem 2.5rem;
+          font-size: 1.2rem;
         }
 
-        .intro-buttons a button:hover {
-            background-color: var(--accent-blue);
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 162, 255, 0.4);
+        main {
+          padding: 2rem 1rem;
         }
 
-        .portfolio-content {
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
+        section {
+          padding: 2rem;
+          margin-bottom: 3rem;
         }
 
         .portfolio-card h2 {
-            color: var(--accent-blue);
-            margin-bottom: 1.8rem;
-            font-size: 2.8rem;
-            font-weight: 600;
-            border-bottom: 2px solid var(--subtle-gray);
-            padding-bottom: 1rem;
-            display: inline-block;
+          font-size: 2.2rem;
+          padding-bottom: 0.6rem;
         }
 
         .portfolio-card h3 {
-            color: var(--text-light);
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        .portfolio-card p {
-            margin-bottom: 1rem;
-            color: var(--text-light);
-        }
-
-        .portfolio-card ul {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 2rem;
-        }
-
-        .portfolio-card ul li {
-            margin-bottom: 1.2rem;
-            padding-left: 2rem;
-            position: relative;
-            color: var(--text-light);
-        }
-
-        .portfolio-card ul li::before {
-            content: "•";
-            color: var(--accent-blue);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            position: absolute;
-            font-size: 1.5em;
-        }
-
-        .contact-form-section h2 {
-            text-align: center;
-            font-size: 3rem;
-            color: var(--accent-blue);
-            margin-bottom: 3rem;
-            font-weight: 700;
+          font-size: 1.6rem;
         }
 
         .contact-form-section form {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 3rem;
-            background-color: var(--primary-dark);
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .contact-form-section label {
-            font-weight: 600;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .contact-form-section input[type="text"],
-        .contact-form-section input[type="email"],
-        .contact-form-section select,
-        .contact-form-section textarea {
-            padding: 1.2rem;
-            border: 1px solid var(--subtle-gray);
-            border-radius: 8px;
-            font-size: 1.1rem;
-            width: 100%;
-            background-color: var(--secondary-dark);
-            color: var(--text-light);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .contact-form-section input:focus,
-        .contact-form-section select:focus,
-        .contact-form-section textarea:focus {
-            border-color: var(--accent-blue);
-            outline: none;
-            box-shadow: 0 0 0 5px rgba(0, 162, 255, 0.25);
-        }
-
-        .contact-form-section textarea {
-            resize: vertical;
-            min-height: 180px;
+          padding: 2rem;
+          gap: 1.5rem;
         }
 
         .contact-form-section button {
-            background-color: var(--accent-blue);
-            color: var(--button-text);
-            border: none;
-            padding: 1.5rem 3.5rem;
-            border-radius: 50px;
-            font-size: 1.25rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            align-self: flex-end;
-            margin-top: 2rem;
-            box-shadow: 0 6px 20px rgba(0, 162, 255, 0.3);
-        }
-
-        .contact-form-section button:hover {
-            background-color: #0087d1;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 162, 255, 0.5);
-        }
-
-        .social-links {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--subtle-gray);
+          padding: 1.2rem 2.5rem;
+          font-size: 1.15rem;
         }
 
         .social-links a {
-            color: var(--text-light);
-            font-size: 2.5rem;
-            margin: 0 1rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-blue);
-            transform: scale(1.2);
+          font-size: 2rem;
+          margin: 0 0.8rem;
         }
 
         .proverb {
-            text-align: center;
-            font-style: italic;
-            color: #999;
-            margin-top: 3rem;
-            font-size: 1.2rem;
-        }
-
-        #resume-section {
-            background-color: var(--secondary-dark);
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-            padding: 3rem;
-            max-width: 900px;
-            margin: 0 auto 5rem auto;
-        }
-
-        #resume-section h1 {
-            font-size: 3rem;
-            color: var(--accent-blue);
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        #resume-section h2 {
-            font-size: 2.2rem;
-            color: var(--text-light);
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--subtle-gray);
-            padding-bottom: 0.8rem;
-        }
-
-        #resume-section .resume-header-info {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            font-size: 1.2rem;
-            color: #aaa;
-        }
-
-        #resume-section .resume-header-info span {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        #resume-section .resume-header-info a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        #resume-section .resume-header-info a:hover {
-            color: var(--text-light);
-            text-decoration: underline;
-        }
-
-        #resume-section strong {
-            color: var(--accent-blue);
-        }
-
-        #resume-section ul {
-            list-style: none;
-            padding-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        #resume-section ul li {
-            position: relative;
-            margin-bottom: 0.8rem;
-        }
-
-        #resume-section ul li::before {
-            content: "•";
-            color: var(--accent-blue);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            position: absolute;
-        }
-
-        #resume-section p {
-            margin-bottom: 1.5rem;
-        }
-
-        .resume-buttons {
-            text-align: center;
-            margin-top: 4rem;
+          font-size: 1rem;
         }
 
         .resume-buttons a button {
-            background-color: var(--accent-blue);
-            color: var(--button-text);
-            border: none;
-            padding: 1.2rem 3rem;
-            margin: 0.8rem 1.5rem;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(0, 162, 255, 0.3);
+          width: 80%;
+          margin: 0.6rem auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #intro-section h1 {
+          font-size: 3rem;
         }
 
-        .resume-buttons a button:hover {
-            background-color: #0087d1;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 162, 255, 0.5);
+        section {
+          padding: 1.5rem;
         }
 
-        #global-proverb {
-            text-align: center;
-            font-style: italic;
-            color: #999;
-            margin-top: 6rem;
-            margin-bottom: 4rem;
-            font-size: 1.3rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+        .portfolio-card h2 {
+          font-size: 1.8rem;
         }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--secondary-dark);
-            color: #999;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--subtle-gray);
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 1.2rem 1.5rem;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: var(--primary-dark);
-                position: absolute;
-                top: 80px;
-                left: 0;
-                padding: 1rem 0;
-                text-align: center;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                margin: 0.8rem 0;
-            }
-
-            .hamburger-menu {
-                display: block;
-            }
-
-            #intro-section {
-                padding: 5rem 1rem;
-            }
-
-            #intro-section h1 {
-                font-size: 3.5rem;
-            }
-
-            .intro-buttons {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .intro-buttons a button {
-                width: 90%;
-                max-width: 350px;
-                padding: 1.2rem 2.5rem;
-                font-size: 1.2rem;
-            }
-
-            main {
-                padding: 2rem 1rem;
-            }
-
-            section {
-                padding: 2rem;
-                margin-bottom: 3rem;
-            }
-
-            .portfolio-card h2 {
-                font-size: 2.2rem;
-                padding-bottom: 0.6rem;
-            }
-
-            .portfolio-card h3 {
-                font-size: 1.6rem;
-            }
-
-            .contact-form-section form {
-                padding: 2rem;
-                gap: 1.5rem;
-            }
-
-            .contact-form-section button {
-                padding: 1.2rem 2.5rem;
-                font-size: 1.15rem;
-            }
-
-            .social-links a {
-                font-size: 2rem;
-                margin: 0 0.8rem;
-            }
-
-            .proverb {
-                font-size: 1rem;
-            }
-
-            .resume-buttons a button {
-                width: 80%;
-                margin: 0.6rem auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #intro-section h1 {
-                font-size: 3rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-
-            .portfolio-card h2 {
-                font-size: 1.8rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="hamburger-menu" id="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about-me-section">About Me</a></li>
-                <li><a href="#education-section">Education</a></li>
-                <li><a href="#skills-section">Skills</a></li>
-                <li><a href="#certifications-section">Certifications</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about-me-section">About Me</a></li>
+          <li><a href="#education-section">Education</a></li>
+          <li><a href="#skills-section">Skills</a></li>
+          <li><a href="#certifications-section">Certifications</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="intro-section">
-            <h1>Hi, I'm S. Suriya</h1>
-            <div class="intro-buttons">
-                <a href="#about-me-section"><button>Learn More</button></a>
-                <a href="#contact-section"><button>Get In Touch</button></a>
-            </div>
-        </section>
+      <section id="intro-section">
+        <h1>Hi, I'm S. Suriya</h1>
+        <div class="intro-buttons">
+          <a href="#about-me-section"><button>Learn More</button></a>
+          <a href="#contact-section"><button>Get In Touch</button></a>
+        </div>
+      </section>
 
-        <section id="about-me-section" class="portfolio-card">
-            <h2>About Me</h2>
-            <p>I am S. Suriya, a second-year undergraduate student pursuing B.Tech in Computer Science and Business Systems (CSBS) at Rajalakshmi Engineering College, Chennai. I am passionate about using technology to solve real-world problems and have a particular interest in the field of Artificial Intelligence. I enjoy exploring AI-based tools and platforms such as ChatGPT, DeepSeek, and Gemini, which I often utilize to enhance both my academic understanding and problem-solving abilities. As a learner committed to growth, I continuously seek opportunities to upskill, explore new technologies, and apply my knowledge practically.</p>
-        </section>
+      <section id="about-me-section" class="portfolio-card">
+        <h2>About Me</h2>
+        <p>
+          I am S. Suriya, a second-year undergraduate student pursuing B.Tech in
+          Computer Science and Business Systems (CSBS) at Rajalakshmi
+          Engineering College, Chennai. I am passionate about using technology
+          to solve real-world problems and have a particular interest in the
+          field of Artificial Intelligence. I enjoy exploring AI-based tools and
+          platforms such as ChatGPT, DeepSeek, and Gemini, which I often utilize
+          to enhance both my academic understanding and problem-solving
+          abilities. As a learner committed to growth, I continuously seek
+          opportunities to upskill, explore new technologies, and apply my
+          knowledge practically.
+        </p>
+      </section>
 
-        <section id="education-section" class="portfolio-card">
-            <h2>Education</h2>
-            <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
-            <p>Rajalakshmi Engineering College, Chennai</p>
-            <p>2024 – 2028</p>
-            <p>Current CGPA: 8.14</p>
-            <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
-            <p>Completed full schooling up to Class 12 at the same institution</p>
-            <p>Year of Completion: 2024</p>
-        </section>
+      <section id="education-section" class="portfolio-card">
+        <h2>Education</h2>
+        <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
+        <p>Rajalakshmi Engineering College, Chennai</p>
+        <p>2024 – 2028</p>
+        <p>Current CGPA: 8.14</p>
+        <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
+        <p>Completed full schooling up to Class 12 at the same institution</p>
+        <p>Year of Completion: 2024</p>
+      </section>
 
-        <section id="skills-section" class="portfolio-card">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> C, Python, Java (currently learning)</li>
-                <li><strong>Data Structures and Algorithms (DSA):</strong> Core concepts and applications</li>
-                <li><strong>Artificial Intelligence Tools:</strong> Proficient in applying AI tools like ChatGPT, DeepSeek, and Gemini for academic support and creative problem-solving</li>
-                <li><strong>Problem Solving:</strong> Strong inclination toward logic-building and using code for efficient solutions</li>
-            </ul>
-            <h3>Tools and Platforms</h3>
-            <ul>
-                <li><strong>TryHackMe:</strong> Engaging in cybersecurity basics and simulations to strengthen awareness and skills</li>
-                <li><strong>Git & GitHub:</strong> Version control and collaborative coding using repositories</li>
-                <li><strong>GeeksforGeeks:</strong> Regularly used for understanding computer science concepts and practicing coding problems</li>
-            </ul>
-            <p>These platforms support my academic learning and help me build practical knowledge and skills efficiently.</p>
-        </section>
+      <section id="skills-section" class="portfolio-card">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li>
+            <strong>Programming Languages:</strong> C, Python, Java (currently
+            learning)
+          </li>
+          <li>
+            <strong>Data Structures and Algorithms (DSA):</strong> Core concepts
+            and applications
+          </li>
+          <li>
+            <strong>Artificial Intelligence Tools:</strong> Proficient in
+            applying AI tools like ChatGPT, DeepSeek, and Gemini for academic
+            support and creative problem-solving
+          </li>
+          <li>
+            <strong>Problem Solving:</strong> Strong inclination toward
+            logic-building and using code for efficient solutions
+          </li>
+        </ul>
+        <h3>Tools and Platforms</h3>
+        <ul>
+          <li>
+            <strong>TryHackMe:</strong> Engaging in cybersecurity basics and
+            simulations to strengthen awareness and skills
+          </li>
+          <li>
+            <strong>Git & GitHub:</strong> Version control and collaborative
+            coding using repositories
+          </li>
+          <li>
+            <strong>GeeksforGeeks:</strong> Regularly used for understanding
+            computer science concepts and practicing coding problems
+          </li>
+        </ul>
+        <p>
+          These platforms support my academic learning and help me build
+          practical knowledge and skills efficiently.
+        </p>
+      </section>
 
-        <section id="current-focus-section" class="portfolio-card">
-            <h2>My Current Focus</h2>
-            <p>At present, I am deeply focused on enhancing my coding abilities, completing certification courses, and building simple but effective projects. I am actively learning Java and Database Management Systems to expand my technical foundation. Additionally, I am exploring multiple AI platforms to understand their real-world applications and integrate them into my problem-solving approach.</p>
-        </section>
+      <section id="current-focus-section" class="portfolio-card">
+        <h2>My Current Focus</h2>
+        <p>
+          At present, I am deeply focused on enhancing my coding abilities,
+          completing certification courses, and building simple but effective
+          projects. I am actively learning Java and Database Management Systems
+          to expand my technical foundation. Additionally, I am exploring
+          multiple AI platforms to understand their real-world applications and
+          integrate them into my problem-solving approach.
+        </p>
+      </section>
 
-        <section id="certifications-section" class="portfolio-card">
-            <h2>Certifications</h2>
-            <ul>
-                <li><strong>Python Foundation Certificate:</strong> Completed through Infosys Springboard, recognizing my foundational skills in Python programming</li>
-                <li><strong>Cybersecurity Virtual Job Simulation:</strong> Successfully completed a Cyber Job Simulation with Deloitte, gaining insights into real-world cybersecurity tasks and workplace scenarios</li>
-                <li><strong>MongoDB Basics for Students Certificate:</strong> Completed through MongoDB University, validating foundational knowledge in MongoDB database management</li>
-            </ul>
-        </section>
+      <section id="certifications-section" class="portfolio-card">
+        <h2>Certifications</h2>
+        <ul>
+          <li>
+            <strong>Python Foundation Certificate:</strong> Completed through
+            Infosys Springboard, recognizing my foundational skills in Python
+            programming
+          </li>
+          <li>
+            <strong>Cybersecurity Virtual Job Simulation:</strong> Successfully
+            completed a Cyber Job Simulation with Deloitte, gaining insights
+            into real-world cybersecurity tasks and workplace scenarios
+          </li>
+          <li>
+            <strong>MongoDB Basics for Students Certificate:</strong> Completed
+            through MongoDB University, validating foundational knowledge in
+            MongoDB database management
+          </li>
+        </ul>
+      </section>
 
-        <section id="contact-section" class="portfolio-card contact-form-section">
-            <h2>Get In Touch</h2>
-            <form action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://suriya777.netlify.app/">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="Name" required placeholder="Your name">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="Email" required placeholder="yourname@xyz.com">
-                <label for="reason">Reason for reaching out:</label>
-                <select id="reason" name="Reason for reaching out" required>
-                    <option value="" disabled selected>Select a reason</option>
-                    <option value="Internship opportunity">Internship opportunity</option>
-                    <option value="Project collaboration">Project collaboration</option>
-                    <option value="Portfolio feedback">Portfolio feedback</option>
-                    <option value="Offering mentorship or career advice">Offering mentorship or career advice</option>
-                    <option value="Other">Other</option>
-                </select>
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="Message" rows="7" required placeholder="Your message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <div class="social-links">
-                <a href="mailto:dnssuriya@gmail.com" aria-label="Personal Email"><i class="fas fa-envelope"></i> Personal Email</a>
-                <a href="mailto:suriya.s.2024.csbs@rajalakshmi.edu.in" aria-label="College Email"><i class="fas fa-envelope-square"></i> College Email</a>
-                <a href="https://github.com/suriyadns" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/suriya-s-bababa340" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.instagram.com/suriya.__777/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-            </div>
-            <p class="proverb">"The future belongs to those who learn more skills and combine them in creative ways."</p>
-        </section>
+      <section id="contact-section" class="portfolio-card contact-form-section">
+        <h2>Get In Touch</h2>
+        <form action="https://formsubmit.co/dnssuriya@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://suriya777.netlify.app/" />
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            required
+            placeholder="Your name" />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            required
+            placeholder="yourname@xyz.com" />
+          <label for="reason">Reason for reaching out:</label>
+          <select id="reason" name="Reason for reaching out" required>
+            <option value="" disabled selected>Select a reason</option>
+            <option value="Internship opportunity">
+              Internship opportunity
+            </option>
+            <option value="Project collaboration">Project collaboration</option>
+            <option value="Portfolio feedback">Portfolio feedback</option>
+            <option value="Offering mentorship or career advice">
+              Offering mentorship or career advice
+            </option>
+            <option value="Other">Other</option>
+          </select>
+          <label for="message">Your Message:</label>
+          <textarea
+            id="message"
+            name="Message"
+            rows="7"
+            required
+            placeholder="Your message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+          <a href="mailto:dnssuriya@gmail.com" aria-label="Personal Email"
+            ><i class="fas fa-envelope"></i> Personal Email</a
+          >
+          <a
+            href="mailto:suriya.s.2024.csbs@rajalakshmi.edu.in"
+            aria-label="College Email"
+            ><i class="fas fa-envelope-square"></i> College Email</a
+          >
+          <a
+            href="https://github.com/suriyadns"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/suriya-s-bababa340"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <a
+            href="https://www.instagram.com/suriya.__777/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+        </div>
+        <p class="proverb">
+          "The future belongs to those who learn more skills and combine them in
+          creative ways."
+        </p>
+      </section>
 
-        <section id="resume-section" class="portfolio-card">
-            <h1>S. SURIYA</h1>
-            <div class="resume-header-info">
-                <span>2nd Year B.Tech Student – Computer Science and Business Systems</span>
-                <span>Rajalakshmi Engineering College, Chennai</span>
-                <span>📧 Personal: <a href="mailto:dnssuriya@gmail.com">dnssuriya@gmail.com</a> | 📧 College: <a href="mailto:suriya.s.2024.csbs@rajalakshmi.edu.in">suriya.s.2024.csbs@rajalakshmi.edu.in</a> | 🔗 <a href="https://www.linkedin.com/in/suriya-s-bababa340" target="_blank">LinkedIn</a> | 🐙 <a href="https://github.com/suriyadns" target="_blank">GitHub</a> | 🌐 <a href="https://suriya777.netlify.app/" target="_blank">Portfolio</a></span>
-            </div>
+      <section id="resume-section" class="portfolio-card">
+        <h1>S. SURIYA</h1>
+        <div class="resume-header-info">
+          <span
+            >2nd Year B.Tech Student – Computer Science and Business
+            Systems</span
+          >
+          <span>Rajalakshmi Engineering College, Chennai</span>
+          <span
+            >📧 Personal:
+            <a href="mailto:dnssuriya@gmail.com">dnssuriya@gmail.com</a> | 📧
+            College:
+            <a href="mailto:suriya.s.2024.csbs@rajalakshmi.edu.in"
+              >suriya.s.2024.csbs@rajalakshmi.edu.in</a
+            >
+            | 🔗
+            <a
+              href="https://www.linkedin.com/in/suriya-s-bababa340"
+              target="_blank"
+              >LinkedIn</a
+            >
+            | 🐙
+            <a href="https://github.com/suriyadns" target="_blank">GitHub</a> |
+            🌐
+            <a href="https://suriya777.netlify.app/" target="_blank"
+              >Portfolio</a
+            ></span
+          >
+        </div>
 
-            <hr>
+        <hr />
 
-            <h2>SUMMARY</h2>
-            <p>Highly motivated second-year Computer Science and Business Systems student with a keen interest in <strong>Artificial Intelligence</strong> and its applications. Proven foundational skills in <strong>Python, C, and Data Structures & Algorithms</strong>, complemented by practical experience with <strong>AI tools (ChatGPT, DeepSeek, Gemini)</strong>. Eager to leverage problem-solving abilities and a commitment to continuous learning to contribute to innovative projects and gain valuable industry experience.</p>
+        <h2>SUMMARY</h2>
+        <p>
+          Highly motivated second-year Computer Science and Business Systems
+          student with a keen interest in
+          <strong>Artificial Intelligence</strong> and its applications. Proven
+          foundational skills in
+          <strong>Python, C, and Data Structures & Algorithms</strong>,
+          complemented by practical experience with
+          <strong>AI tools (ChatGPT, DeepSeek, Gemini)</strong>. Eager to
+          leverage problem-solving abilities and a commitment to continuous
+          learning to contribute to innovative projects and gain valuable
+          industry experience.
+        </p>
 
-            <hr>
+        <hr />
 
-            <h2>EDUCATION</h2>
-            <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
-            <p>Rajalakshmi Engineering College, Chennai</p>
-            <p>2024 – 2028</p>
-            <p>Current CGPA: 8.14</p>
+        <h2>EDUCATION</h2>
+        <h3>Bachelor of Technology – Computer Science and Business Systems</h3>
+        <p>Rajalakshmi Engineering College, Chennai</p>
+        <p>2024 – 2028</p>
+        <p>Current CGPA: 8.14</p>
 
-            <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
-            <p>Completed full schooling up to Class 12 at the same institution</p>
-            <p>Year of Completion: 2024</p>
+        <h3>SBOA Matriculation Higher Secondary School, Anna Nagar, Chennai</h3>
+        <p>Completed full schooling up to Class 12 at the same institution</p>
+        <p>Year of Completion: 2024</p>
 
-            <hr>
+        <hr />
 
-            <h2>TECHNICAL SKILLS</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Python, C (currently learning Java with a focus on OOPs)</li>
-                <li><strong>Core Concepts:</strong> Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP)</li>
-                <li><strong>AI Tools:</strong> ChatGPT, DeepSeek, Gemini (for problem-solving & academic support)</li>
-                <li><strong>Version Control:</strong> Git, GitHub</li>
-                <li><strong>Databases:</strong> Currently learning Database Management Systems (DBMS)</li>
-                <li><strong>Platforms & Tools:</strong> TryHackMe (Cybersecurity basics), GeeksforGeeks (Coding practice)</li>
-            </ul>
+        <h2>TECHNICAL SKILLS</h2>
+        <ul>
+          <li>
+            <strong>Programming Languages:</strong> Python, C (currently
+            learning Java with a focus on OOPs)
+          </li>
+          <li>
+            <strong>Core Concepts:</strong> Data Structures & Algorithms (DSA),
+            Object-Oriented Programming (OOP)
+          </li>
+          <li>
+            <strong>AI Tools:</strong> ChatGPT, DeepSeek, Gemini (for
+            problem-solving & academic support)
+          </li>
+          <li><strong>Version Control:</strong> Git, GitHub</li>
+          <li>
+            <strong>Databases:</strong> Currently learning Database Management
+            Systems (DBMS)
+          </li>
+          <li>
+            <strong>Platforms & Tools:</strong> TryHackMe (Cybersecurity
+            basics), GeeksforGeeks (Coding practice)
+          </li>
+        </ul>
 
-            <hr>
+        <hr />
 
-            <h2>CERTIFICATIONS</h2>
-            <ul>
-                <li><strong>Python Foundation Certificate</strong> – Infosys Springboard</li>
-                <li><strong>Cybersecurity Virtual Job Simulation</strong> – Deloitte (Gained insights into real-world cybersecurity tasks)</li>
-                <li><strong>MongoDB Basics for Students Certificate</strong> – MongoDB University (Validating foundational knowledge in MongoDB database management)</li>
-            </ul>
+        <h2>CERTIFICATIONS</h2>
+        <ul>
+          <li>
+            <strong>Python Foundation Certificate</strong> – Infosys Springboard
+          </li>
+          <li>
+            <strong>Cybersecurity Virtual Job Simulation</strong> – Deloitte
+            (Gained insights into real-world cybersecurity tasks)
+          </li>
+          <li>
+            <strong>MongoDB Basics for Students Certificate</strong> – MongoDB
+            University (Validating foundational knowledge in MongoDB database
+            management)
+          </li>
+        </ul>
 
-            <hr>
+        <hr />
 
-            <h2>PROJECTS</h2>
-            <p>(Actively building a personal portfolio and practical coding models. Currently exploring potential AI-driven projects for development and presentation.)</p>
+        <h2>PROJECTS</h2>
+        <p>
+          (Actively building a personal portfolio and practical coding models.
+          Currently exploring potential AI-driven projects for development and
+          presentation.)
+        </p>
 
-            <div class="resume-buttons">
-                <a href="path/to/your/s_suriya_resume.pdf" download="S.Suriya_Resume.pdf">
-                    <button>Download Resume</button>
-                </a>
-            </div>
-        </section>
+        <div class="resume-buttons">
+          <a href="/resume.pdf">
+            <button>Download Resume</button>
+          </a>
+        </div>
+      </section>
 
-        <p id="global-proverb">"Success is not final, failure is not fatal: it is the courage to continue that counts."</p>
+      <p id="global-proverb">
+        "Success is not final, failure is not fatal: it is the courage to
+        continue that counts."
+      </p>
     </main>
 
     <footer>
-        <p>&copy; 2025 S. Suriya. All rights reserved.</p>
+      <p>&copy; 2025 S. Suriya. All rights reserved.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-links a');
-            const hamburgerMenu = document.getElementById('hamburger-menu');
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".nav-links a");
+        const hamburgerMenu = document.getElementById("hamburger-menu");
 
-            hamburgerMenu.addEventListener('click', () => {
-                document.getElementById('nav-links').classList.toggle('active');
-            });
-
-            // Handle smooth scrolling for all links
-            navLinks.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    document.getElementById('nav-links').classList.remove('active');
-                });
-            });
-            
-            // Highlight active link on scroll
-            const sections = document.querySelectorAll('section');
-            function updateActiveLink() {
-                const scrollPosition = window.scrollY + window.innerHeight / 2;
-                sections.forEach(section => {
-                    const id = section.getAttribute('id');
-                    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-
-                    if (link && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-                        navLinks.forEach(navLink => navLink.classList.remove('active'));
-                        link.classList.add('active');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', updateActiveLink);
-            updateActiveLink(); // Initial call to set the active link
+        hamburgerMenu.addEventListener("click", () => {
+          document.getElementById("nav-links").classList.toggle("active");
         });
+
+        // Handle smooth scrolling for all links
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            document.getElementById("nav-links").classList.remove("active");
+          });
+        });
+
+        // Highlight active link on scroll
+        const sections = document.querySelectorAll("section");
+        function updateActiveLink() {
+          const scrollPosition = window.scrollY + window.innerHeight / 2;
+          sections.forEach((section) => {
+            const id = section.getAttribute("id");
+            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+
+            if (
+              link &&
+              scrollPosition >= section.offsetTop &&
+              scrollPosition < section.offsetTop + section.offsetHeight
+            ) {
+              navLinks.forEach((navLink) => navLink.classList.remove("active"));
+              link.classList.add("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", updateActiveLink);
+        updateActiveLink(); // Initial call to set the active link
+      });
     </script>
-</body>
+  </body>
 </html>
